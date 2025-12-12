@@ -1,0 +1,18 @@
+# Oviedo Bus API - Python Requirements
+# Unofficial client for TUA bus data (educational project)
+
+# Core dependencies
+requests>=2.32.0
+pyyaml>=6.0.2
+
+# Optional: Web scraping
+beautifulsoup4>=4.12.0
+lxml>=5.3.0
+
+# Development dependencies
+pytest>=8.4.0
+pytest-cov>=6.0.0
+black>=24.0.0
+flake8>=7.1.0
+mypy>=1.11.0
+jsonschema>=4.23.0

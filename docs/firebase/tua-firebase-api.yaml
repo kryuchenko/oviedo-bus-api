@@ -1,0 +1,373 @@
+openapi: 3.1.0
+
+info:
+  title: TUA Firebase Firestore API
+  version: 1.0.0
+  description: |
+    **Unofficial documentation** for TUA bus data stored in Firebase Firestore.
+
+    ⚠️ **DISCLAIMER:**
+    - This is **NOT official** Google or TUA documentation
+    - Reverse-engineered for educational purposes
+    - API belongs to Google (Firebase) and TUA (data)
+    - Not affiliated with Google, Firebase, TUA, or ALSA
+
+    ## Overview
+
+    TUA stores static bus data (stops, routes, schedules) in Firebase Firestore.
+    Data can be accessed via Firebase REST API with API key extracted from Android app.
+
+    **Project:** `alsa-tua`
+    **Database:** `(default)`
+
+    ## Collections
+
+    - `groups` - 16 bus line groups (A-V, BÚHO)
+    - `groups/{id}/lines` - Lines for each group (2 per group = 32 total)
+    - `groups/{id}/lines/{id}/stops` - Stops for each line with GPS coordinates
+    - `prices` - Pricing information
+    - `accesibility` - Accessibility data
+
+    ## Authentication
+
+    API key from decompiled Android app (TUA 2.1.12):
+    ```
+    AIzaSyA33UosvNZi3hlyjIV1jTCfUFrOjrZsR6M
+    ```
+
+    ⚠️ **Security rules allow read access with this key.**
+
+  contact:
+    name: Unofficial Documentation
+  license:
+    name: Educational Use Only
+
+servers:
+  - url: https://firestore.googleapis.com/v1
+    description: Firebase Firestore REST API
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /projects/alsa-tua/databases/(default)/documents/groups:
+    get:
+      summary: Get all bus line groups
+      description: |
+        Returns all 16 bus line groups (A-V, BÚHO) with metadata.
+
+        Each group contains:
+        - Line identifier (A-V, BÚHO)
+        - Color (hex code)
+        - Schedule information
+        - Accessibility data
+
+      operationId: getGroups
+      tags:
+        - Groups
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of groups
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupsResponse'
+              example:
+                documents:
+                  - name: "projects/alsa-tua/databases/(default)/documents/groups/A"
+                    fields:
+                      ACCESIBILIDAD:
+                        stringValue: "Accesible"
+                      COLOR:
+                        stringValue: "#ec743d"
+                      HORARIOS:
+                        stringValue: "<html>Schedule content...</html>"
+                      LINEA:
+                        stringValue: "A"
+                    createTime: "2024-01-15T10:30:00Z"
+                    updateTime: "2024-01-15T10:30:00Z"
+
+  /projects/alsa-tua/databases/(default)/documents/groups/{groupId}/lines:
+    get:
+      summary: Get lines for a group
+      description: |
+        Returns lines (routes) for a specific group.
+
+        Each group has 2 lines (directions):
+        - Line 1: ida (outbound)
+        - Line 2: vuelta (return)
+
+      operationId: getLines
+      tags:
+        - Lines
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          description: Group ID (A-V, BÚHO)
+          schema:
+            type: string
+            enum: [A, B, C, D, E, F, G, H, J, K, L, M, O, U, V, BÚHO]
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of lines for the group
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LinesResponse'
+
+  /projects/alsa-tua/databases/(default)/documents/groups/{groupId}/lines/{lineId}/stops:
+    get:
+      summary: Get stops for a line
+      description: |
+        Returns all stops for a specific line with GPS coordinates.
+
+        Each stop contains:
+        - Stop code (integer)
+        - Stop name (string)
+        - GPS coordinates (geoPointValue)
+        - Line color
+        - Order in route
+
+        **GPS Coverage:** 100% (all 553 stops have coordinates)
+
+      operationId: getStops
+      tags:
+        - Stops
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          description: Group ID (A-V, BÚHO)
+          schema:
+            type: string
+        - name: lineId
+          in: path
+          required: true
+          description: Line ID (1 or 2)
+          schema:
+            type: string
+            enum: ["1", "2"]
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: List of stops with GPS coordinates
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StopsResponse'
+              example:
+                documents:
+                  - name: "projects/alsa-tua/databases/(default)/documents/groups/A/lines/1/stops/1001"
+                    fields:
+                      CODIGO:
+                        integerValue: "1001"
+                      COLOR:
+                        stringValue: "#ec743d"
+                      LINEA:
+                        stringValue: "A1"
+                      NOMBRE:
+                        stringValue: "Aureliano San Román"
+                      ORDEN:
+                        integerValue: "1"
+                      UBICACION:
+                        geoPointValue:
+                          latitude: 43.36264038085938
+                          longitude: -5.865974903106689
+
+  /projects/alsa-tua/databases/(default)/documents/prices:
+    get:
+      summary: Get pricing information
+      description: Returns pricing data for TUA bus tickets.
+      operationId: getPrices
+      tags:
+        - Metadata
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Pricing information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentsResponse'
+
+  /projects/alsa-tua/databases/(default)/documents/accesibility:
+    get:
+      summary: Get accessibility information
+      description: Returns accessibility data for TUA buses and stops.
+      operationId: getAccessibility
+      tags:
+        - Metadata
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Accessibility information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentsResponse'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: key
+      description: |
+        API key from decompiled TUA Android app.
+
+        ⚠️ Using this key may violate Firebase ToS.
+        Educational purposes only.
+
+  parameters:
+    ApiKey:
+      name: key
+      in: query
+      required: true
+      description: Firebase API key
+      schema:
+        type: string
+        default: AIzaSyA33UosvNZi3hlyjIV1jTCfUFrOjrZsR6M
+
+  schemas:
+    GroupsResponse:
+      type: object
+      properties:
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroupDocument'
+
+    GroupDocument:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full document path
+        fields:
+          type: object
+          properties:
+            LINEA:
+              $ref: '#/components/schemas/StringValue'
+            COLOR:
+              $ref: '#/components/schemas/StringValue'
+            HORARIOS:
+              $ref: '#/components/schemas/StringValue'
+            ACCESIBILIDAD:
+              $ref: '#/components/schemas/StringValue'
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+
+    LinesResponse:
+      type: object
+      properties:
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/LineDocument'
+
+    LineDocument:
+      type: object
+      properties:
+        name:
+          type: string
+        fields:
+          type: object
+          properties:
+            LINEA:
+              $ref: '#/components/schemas/StringValue'
+            ORIGEN:
+              $ref: '#/components/schemas/StringValue'
+            DESTINO:
+              $ref: '#/components/schemas/StringValue'
+            COLOR:
+              $ref: '#/components/schemas/StringValue'
+
+    StopsResponse:
+      type: object
+      properties:
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/StopDocument'
+
+    StopDocument:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full document path
+        fields:
+          type: object
+          properties:
+            CODIGO:
+              $ref: '#/components/schemas/IntegerValue'
+            NOMBRE:
+              $ref: '#/components/schemas/StringValue'
+            UBICACION:
+              $ref: '#/components/schemas/GeoPointValue'
+            LINEA:
+              $ref: '#/components/schemas/StringValue'
+            COLOR:
+              $ref: '#/components/schemas/StringValue'
+            ORDEN:
+              $ref: '#/components/schemas/IntegerValue'
+
+    DocumentsResponse:
+      type: object
+      properties:
+        documents:
+          type: array
+          items:
+            type: object
+
+    StringValue:
+      type: object
+      properties:
+        stringValue:
+          type: string
+
+    IntegerValue:
+      type: object
+      properties:
+        integerValue:
+          type: string
+          description: Integer as string
+
+    GeoPointValue:
+      type: object
+      properties:
+        geoPointValue:
+          type: object
+          properties:
+            latitude:
+              type: number
+              format: double
+              description: Latitude in degrees
+            longitude:
+              type: number
+              format: double
+              description: Longitude in degrees
+
+tags:
+  - name: Groups
+    description: Bus line groups (A-V, BÚHO)
+  - name: Lines
+    description: Routes for each group
+  - name: Stops
+    description: Bus stops with GPS coordinates
+  - name: Metadata
+    description: Additional data (prices, accessibility)
+
+externalDocs:
+  description: Firebase Firestore REST API Documentation
+  url: https://firebase.google.com/docs/firestore/use-rest-api

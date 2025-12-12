@@ -1,0 +1,508 @@
+openapi: 3.1.0
+jsonSchemaDialect: https://spec.openapis.org/oas/3.1/dialect/base
+info:
+  title: TUA (Transportes Unidos de Asturias) API
+  summary: Real-time bus arrival information for Oviedo public transport
+  description: |
+    API for public transport information in Oviedo, Spain.
+
+    ## Features
+    - Get bus arrival times at stops
+    - Distance to stop in meters
+    - Support up to 3 buses per line
+    - Letter-based line naming (A, B, C, D, E, F, G, H, J, K, L, M, O, U, V, BÚHO)
+    - CORS enabled for web applications
+
+    ## Bus Lines
+
+    **Regular lines:** A, B, C, D, E, F, G, H, J, K, L, M, O, U, V
+    **Night service:** BÚHO
+
+    Each line has two directions with numbered variants:
+    - E1: Las Campas → La Monxina (outbound)
+    - E2: La Monxina → Las Campas (return)
+
+    ## Stop Codes
+
+    Stop codes are **numeric identifiers** in the following ranges:
+    - **1000-1999**: Main city stops (Centro, Uría, etc.)
+    - **4000-4999**: Peripheral areas
+
+    **Total stops:** 553
+    **GPS coordinates:** 100% coverage via Firebase Firestore (all 553 stops)
+
+    ### Example Stop Codes (City Center 1000-1999):
+    - `1000` - A.Casona - María P. Neira (Line F)
+    - `1001` - Aureliano San Román (Lines E, D, BÚHO)
+    - `1002` - A. S. Román-Palladium (Line BÚHO)
+    - `1003` - Adelantado de la Florida (Line H)
+    - `1221` - Uria Sur (Lines H, L, E, D, A, G)
+    - `1332` - HUCA Urgencias (Lines F, V)
+
+    ### Example Stop Codes (Peripheral 4000-4999):
+    - `4004` - Alejandro Casona (Line F)
+    - `4005` - Alto el Ferrador (Line L)
+    - `4006` - Ángel Cañedo (Line BÚHO)
+    - `4258` - Las Campas I (Line E)
+    - `4518` - Paseo La Florida (Line E)
+
+    ## Performance
+
+    - **Response time:** 10-15 seconds (typical)
+    - **Timeout recommended:** 20-30 seconds
+    - **Rate limiting:** Not enforced, but recommended max 1 request per 10 seconds per stop
+    - **Data refresh:** ~10-30 seconds
+
+    ## External Resources
+
+    - **Firebase Firestore:** Complete database with 553 stops, GPS coordinates, routes, and schedules
+      - Project: `alsa-tua`
+      - Collections: `groups`, `groups/{id}/lines`, `groups/{id}/lines/{id}/stops`
+      - Access: REST API with API key from Android app
+      - GPS Coverage: 100% (all 553 stops)
+    - **Stop Database Files:**
+      - `tua_firebase_stops_gps.json` - All 553 stops with GPS (100% coverage)
+      - `tua_firebase_routes.json` - 32 routes with ordered stops
+      - `tua_firebase_schedules.json` - 16 complete schedules (HTML)
+      - `tua_firebase_complete.json` - Full database dump (362 KB)
+    - **Stop Search:** https://www.tua.es/es/lineas-y-horarios/
+
+    ## REST API Limitations
+
+    - ❌ API does **not** return GPS coordinates of buses
+    - ❌ API does **not** return GPS coordinates of stops
+    - ❌ No historical data available
+    - ❌ No schedule/timetable data via REST API
+    - ✅ Only real-time distance and time to arrival
+
+    ## Firebase Firestore Data (Alternative Source)
+
+    - ✅ **GPS coordinates** for all 553 stops (100% coverage)
+    - ✅ **Routes** with ordered stops for all 32 lines
+    - ✅ **Schedules** in HTML format for all 16 groups
+    - ✅ **Line colors** (hex codes) for UI
+    - ✅ **Stop connections** (which lines serve which stops)
+    - ✅ **Route polyline URLs** (Firebase Storage - access restricted)
+    - ⚠️ **Access method:** Firebase REST API with API key from decompiled Android app
+    - 📖 **Documentation:** See `FIREBASE_ACCESS_EXPLAINED.md` for details
+
+  version: 3.1.0
+  contact:
+    name: TUA
+    url: https://www.tua.es
+  license:
+    name: Proprietary
+    identifier: proprietary
+  termsOfService: https://www.tua.es
+
+servers:
+  - url: https://www.tua.es/rest
+    description: Production API server
+  - url: https://firebasestorage.googleapis.com
+    description: Firebase Storage (for routes)
+
+tags:
+  - name: estimaciones
+    description: Operations for getting bus arrival times
+  - name: routes
+    description: Getting route data
+
+paths:
+  /estimaciones/{stop_code}:
+    get:
+      tags:
+        - estimaciones
+      summary: Get bus arrival times at stop
+      description: |
+        Returns real-time information about bus arrivals at specified stop.
+        For each line there can be up to 3 buses (vh_first, vh_second, vh_third).
+
+        ## Response Format
+        - `line` - Bus line letter (A-V or BÚHO)
+        - `line_names` - Additional line identifiers (usually empty)
+        - `vh_first` - Closest bus (always present if buses exist)
+        - `vh_second` - Second bus (may be null)
+        - `vh_third` - Third bus (may be null)
+        - `destino` - Destination name (format: "E2-LAS CAMPAS")
+        - `meters` - Distance from bus to stop in meters
+        - `seconds` - Time to arrival at stop in seconds
+        - `cabecera` - Boolean indicating if bus is at route start/end
+        - `destination_names` - Array of destination translations
+
+        ## Behavior
+        - ✅ Returns **200 OK** with empty array if no buses at stop
+        - ✅ Returns **200 OK** with data if buses exist
+        - ⚠️ May return **404** if stop code doesn't exist
+        - ⚠️ Response time: 10-15 seconds (slow API)
+        - 🔄 Data refreshes every ~10-30 seconds
+
+        ## Common Patterns
+        - Empty stops: `{"estimaciones": {"value": []}}`
+        - Multiple lines at same stop: Array contains multiple line objects
+        - Bus at terminus: `cabecera: true`
+        - Far buses: `meters` can exceed 10,000m (10km+)
+
+      operationId: getStopEstimations
+      parameters:
+        - name: stop_code
+          in: path
+          required: true
+          description: Stop code (numeric identifier, typically 1000+)
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+            example: 1001
+      responses:
+        '200':
+          description: Successful response with bus arrival data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StopInfo'
+              examples:
+                withBuses:
+                  summary: Stop with buses (real data from stop 1001)
+                  value:
+                    estimaciones:
+                      value:
+                        - line: "E"
+                          line_names: []
+                          vh_first:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "E2-LAS CAMPAS"
+                            destino: "E2-LAS CAMPAS"
+                            meters: 412
+                            seconds: 137
+                          vh_second:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "E2-LAS CAMPAS"
+                            destino: "E2-LAS CAMPAS"
+                            meters: 2341
+                            seconds: 1170
+                        - line: "D"
+                          line_names: []
+                          vh_first:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "D2-FACULTADES"
+                            destino: "D2-FACULTADES"
+                            meters: 3463
+                            seconds: 1154
+                          vh_second:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "D2-FACULTADES"
+                            destino: "D2-FACULTADES"
+                            meters: 6155
+                            seconds: 3077
+                singleLine:
+                  summary: Stop with single line (real data from stop 1000)
+                  value:
+                    estimaciones:
+                      value:
+                        - line: "F"
+                          line_names: []
+                          vh_first:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "F2- HUCA"
+                            destino: "F2- HUCA"
+                            meters: 3930
+                            seconds: 1310
+                          vh_second:
+                            cabecera: false
+                            destination_names:
+                              - key: "default"
+                                value: "F2- HUCA"
+                            destino: "F2- HUCA"
+                            meters: 6602
+                            seconds: 3301
+                emptyStop:
+                  summary: Stop without buses
+                  value:
+                    estimaciones:
+                      value: []
+        '404':
+          description: Stop not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    StopInfo:
+      $id: StopInfo
+      type: object
+      description: Root response object with stop information
+      required:
+        - estimaciones
+      properties:
+        estimaciones:
+          $ref: '#/components/schemas/ValueInfo'
+
+    ValueInfo:
+      $id: ValueInfo
+      type: object
+      description: Wrapper for arrival estimations array
+      required:
+        - value
+      properties:
+        value:
+          type: array
+          description: Array of lines with bus arrival information
+          items:
+            $ref: '#/components/schemas/LineEstimation'
+
+    LineEstimation:
+      $id: LineEstimation
+      type: object
+      description: Information about bus arrivals on specific line
+      required:
+        - line
+        - line_names
+      properties:
+        line:
+          type: string
+          description: Bus line identifier (letter-based, e.g., A, B, C, D, E, F, G, H, J, K, L, M, O, U, V)
+          pattern: "^[A-Z]$|^BÚHO$"
+          examples:
+            - "E"
+            - "F"
+            - "BÚHO"
+        line_names:
+          type: array
+          description: Additional line names (typically empty)
+          items:
+            type: string
+          default: []
+          examples:
+            - []
+        vh_first:
+          oneOf:
+            - $ref: '#/components/schemas/Estimation'
+            - type: "null"
+          description: First bus (closest), null if no buses
+        vh_second:
+          oneOf:
+            - $ref: '#/components/schemas/Estimation'
+            - type: "null"
+          description: Second bus, null if not available
+        vh_third:
+          oneOf:
+            - $ref: '#/components/schemas/Estimation'
+            - type: "null"
+          description: Third bus, null if not available
+
+    Estimation:
+      $id: Estimation
+      type: object
+      description: Information about specific bus
+      required:
+        - cabecera
+        - destination_names
+        - destino
+        - meters
+        - seconds
+      properties:
+        cabecera:
+          type: boolean
+          description: Indicates if bus is at route start/end point
+          examples:
+            - false
+            - true
+        destination_names:
+          type: array
+          description: Destination name translations (key-value pairs)
+          minItems: 1
+          items:
+            type: object
+            required:
+              - key
+              - value
+            properties:
+              key:
+                type: string
+                description: Language/context key
+                const: "default"
+              value:
+                type: string
+                description: Destination name in format "{Line}{Number}-{DESTINATION}"
+                pattern: "^[A-Z]+\\d+-[A-Z ]+"
+                examples:
+                  - "E2-LAS CAMPAS"
+                  - "F2- HUCA"
+                  - "D2-FACULTADES"
+          examples:
+            - - key: "default"
+                value: "E2-LAS CAMPAS"
+        destino:
+          type: string
+          description: Bus destination (primary display name)
+          pattern: "^[A-Z]+\\d+-[A-Z ]+"
+          examples:
+            - "E2-LAS CAMPAS"
+            - "F2- HUCA"
+        meters:
+          type: integer
+          format: int32
+          description: Distance from bus to stop in meters
+          minimum: 0
+          maximum: 50000
+          examples:
+            - 412
+            - 3930
+            - 12277
+        seconds:
+          type: integer
+          format: int32
+          description: Time to arrival at stop in seconds
+          minimum: 0
+          maximum: 7200
+          examples:
+            - 137
+            - 1310
+            - 3077
+
+    Error:
+      type: object
+      description: Error object
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: Error code
+          example: 404
+        message:
+          type: string
+          description: Error description
+          example: "Stop not found"
+        details:
+          type: string
+          description: Additional error information
+          example: "Stop with code 999999 does not exist"
+
+    # Additional models for Firebase (not REST API)
+    Stop:
+      type: object
+      description: |
+        Stop model from Firebase Firestore.
+        NOT part of REST API, used only in the app.
+      properties:
+        code:
+          type: integer
+          format: int64
+          description: Stop code
+          example: 1001
+        compoundId:
+          type: string
+          description: Compound stop identifier
+          example: "E@1001"
+        name:
+          type: string
+          description: Stop name
+          example: "Plaza de América"
+        latitude:
+          type: number
+          format: double
+          description: Stop latitude
+          example: 43.363233
+        longitude:
+          type: number
+          format: double
+          description: Stop longitude
+          example: -5.849429
+        order:
+          type: integer
+          format: int64
+          description: Order number on route
+        isFavourite:
+          type: boolean
+          description: Is stop marked as favorite
+        links:
+          type: array
+          description: Related lines
+          items:
+            $ref: '#/components/schemas/Link'
+
+    Group:
+      type: object
+      description: |
+        Route group from Firebase Firestore.
+        NOT part of REST API.
+      properties:
+        name:
+          type: string
+          description: Group name (line letter)
+          example: "E"
+        lines:
+          type: array
+          description: Lines in group
+          items:
+            $ref: '#/components/schemas/Line'
+
+    Line:
+      type: object
+      description: |
+        Line (route) from Firebase Firestore.
+        NOT part of REST API.
+      properties:
+        name:
+          type: string
+          description: Line name with direction
+          example: "E - Las Campas - La Monxina"
+        route:
+          type: string
+          description: URL to route file in Firebase Storage
+          example: "https://firebasestorage.googleapis.com/v0/b/project/o/routes%2FE.json"
+
+    Link:
+      type: object
+      description: Link to another line
+      properties:
+        name:
+          type: string
+          description: Related line identifier (letter)
+          example: "D"
+
+    Route:
+      type: object
+      description: |
+        Route geometry from Firebase Storage.
+        Format: encoded polyline (Google Maps Polyline Algorithm)
+      properties:
+        LINEA:
+          type: string
+          description: Encoded polyline string of route
+          example: "qg~fF~gmiU_A@_@?"
+        COLOR:
+          type: string
+          description: Line color in HEX format (without #)
+          example: "FF0000"
+        NOMBRE:
+          type: string
+          description: Route name with endpoints
+          example: "E - Las Campas - La Monxina"
+
+  securitySchemes:
+    {}
+
+security: []
+
+externalDocs:
+  description: TUA official website
+  url: https://www.tua.es
