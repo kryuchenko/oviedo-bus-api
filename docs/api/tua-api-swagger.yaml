@@ -58,7 +58,7 @@ info:
     - **Firebase Firestore:** Complete database with 553 stops, GPS coordinates, routes, and schedules
       - Project: `alsa-tua`
       - Collections: `groups`, `groups/{id}/lines`, `groups/{id}/lines/{id}/stops`
-      - Access: REST API with API key from Android app
+      - Access: REST API with API key
       - GPS Coverage: 100% (all 553 stops)
     - **Stop Database Files:**
       - `tua_firebase_stops_gps.json` - All 553 stops with GPS (100% coverage)
@@ -83,7 +83,7 @@ info:
     - ✅ **Line colors** (hex codes) for UI
     - ✅ **Stop connections** (which lines serve which stops)
     - ✅ **Route polyline URLs** (Firebase Storage - access restricted)
-    - ⚠️ **Access method:** Firebase REST API with API key from decompiled Android app
+    - ⚠️ **Access method:** Firebase REST API with API key
     - 📖 **Documentation:** See `FIREBASE_ACCESS_EXPLAINED.md` for details
 
   version: 3.1.0

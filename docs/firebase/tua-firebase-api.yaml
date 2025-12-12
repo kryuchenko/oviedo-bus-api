@@ -15,7 +15,7 @@ info:
     ## Overview
 
     TUA stores static bus data (stops, routes, schedules) in Firebase Firestore.
-    Data can be accessed via Firebase REST API with API key extracted from Android app.
+    Data can be accessed via Firebase REST API with API key.
 
     **Project:** `alsa-tua`
     **Database:** `(default)`
@@ -30,7 +30,7 @@ info:
 
     ## Authentication
 
-    API key from decompiled Android app (TUA 2.1.12):
+    API key for Firebase REST API:
     ```
     AIzaSyA33UosvNZi3hlyjIV1jTCfUFrOjrZsR6M
     ```
@@ -223,7 +223,7 @@ components:
       in: query
       name: key
       description: |
-        API key from decompiled TUA Android app.
+        Firebase API key for accessing TUA data.
 
         ⚠️ Using this key may violate Firebase ToS.
         Educational purposes only.

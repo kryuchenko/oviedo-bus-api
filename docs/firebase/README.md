@@ -10,7 +10,7 @@ TUA stores static bus data in Firebase Firestore. This guide explains how to acc
 
 **Project:** `alsa-tua`
 **Database:** Firestore (default)
-**Access:** REST API with API key from decompiled APK
+**Access:** REST API with API key
 
 ---
 
@@ -125,7 +125,7 @@ Import to Swagger UI or Postman.
 
 ## Security & Legal
 
-**API Key Source:** Decompiled TUA Android app (v2.1.12)
+**API Key:** Firebase REST API key for TUA project
 
 **Security Rules:** Allow anonymous read access with API key
 
