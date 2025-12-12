@@ -1,5 +1,4 @@
 openapi: 3.1.0
-jsonSchemaDialect: https://spec.openapis.org/oas/3.1/dialect/base
 info:
   title: TUA (Transportes Unidos de Asturias) API
   summary: Real-time bus arrival information for Oviedo public transport
