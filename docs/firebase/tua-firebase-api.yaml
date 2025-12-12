@@ -13,7 +13,7 @@ info:
     - API belongs to Google (Firebase), data belongs to TUA/ALSA
     - Using this API key may violate Firebase Terms of Service
     - Educational/research purposes only
-    - ❌ **No CORS** - Browser requests may be blocked (use backend code recommended)
+    - ✅ **CORS enabled** - Works from browser/Swagger Editor
 
     ## Overview
 
@@ -152,10 +152,14 @@ paths:
         - name: lineId
           in: path
           required: true
-          description: Line ID (1 or 2)
+          description: Line ID (format: {groupId}1 or {groupId}2, e.g., "A1", "A2", "D1", "D2")
           schema:
             type: string
-            enum: ["1", "2"]
+            pattern: "^[A-Z]+[12]$|^BÚHO[12]$"
+            examples:
+              - "D1"
+              - "D2"
+              - "E1"
         - $ref: '#/components/parameters/ApiKey'
       responses:
         '200':
@@ -168,7 +172,7 @@ paths:
                 stopExample:
                   value:
                     documents:
-                      - name: "projects/alsa-tua/databases/(default)/documents/groups/A/lines/1/stops/1001"
+                      - name: "projects/alsa-tua/databases/(default)/documents/groups/A/lines/A1/stops/1001"
                         fields:
                           CODIGO:
                             integerValue: "1001"
