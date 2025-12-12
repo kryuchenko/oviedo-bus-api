@@ -3,6 +3,8 @@ info:
   title: TUA (Transportes Unidos de Asturias) API
   summary: Real-time bus arrival information for Oviedo public transport
   description: |
+    ⚠️ **UNOFFICIAL DOCUMENTATION** - Reverse-engineered for educational purposes. Not affiliated with TUA/ALSA.
+
     API for public transport information in Oviedo, Spain.
 
     ## Features
@@ -10,7 +12,7 @@ info:
     - Distance to stop in meters
     - Support up to 3 buses per line
     - Letter-based line naming (A, B, C, D, E, F, G, H, J, K, L, M, O, U, V, BÚHO)
-    - CORS enabled for web applications
+    - ❌ **No CORS** - Browser requests blocked (use curl/Postman/backend code)
 
     ## Bus Lines
 
