@@ -152,7 +152,7 @@ paths:
         - name: lineId
           in: path
           required: true
-          description: Line ID (format: {groupId}1 or {groupId}2, e.g., "A1", "A2", "D1", "D2")
+          description: 'Line ID (format: {groupId}1 or {groupId}2, e.g., "A1", "A2", "D1", "D2")'
           schema:
             type: string
             pattern: "^[A-Z]+[12]$|^BÚHO[12]$"
