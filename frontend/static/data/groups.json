@@ -1,0 +1,82 @@
+[
+  {
+    "id": "A",
+    "name": "A",
+    "color": "#ffee00"
+  },
+  {
+    "id": "B",
+    "name": "B",
+    "color": "#f1bd00"
+  },
+  {
+    "id": "BÚHO",
+    "name": "BÚHO",
+    "color": "#1a171c"
+  },
+  {
+    "id": "C",
+    "name": "C",
+    "color": "#004595"
+  },
+  {
+    "id": "D",
+    "name": "D",
+    "color": "#b49a3d"
+  },
+  {
+    "id": "E",
+    "name": "E",
+    "color": "#ec743d"
+  },
+  {
+    "id": "F",
+    "name": "F",
+    "color": "#7ecef1"
+  },
+  {
+    "id": "G",
+    "name": "G",
+    "color": "#494a4b"
+  },
+  {
+    "id": "H",
+    "name": "H",
+    "color": "#80427b"
+  },
+  {
+    "id": "J",
+    "name": "J",
+    "color": "#08c370"
+  },
+  {
+    "id": "K",
+    "name": "K",
+    "color": "#880558"
+  },
+  {
+    "id": "L",
+    "name": "L",
+    "color": "#cd0c03"
+  },
+  {
+    "id": "M",
+    "name": "M",
+    "color": "#f3bbcc"
+  },
+  {
+    "id": "O",
+    "name": "O",
+    "color": "#73366d"
+  },
+  {
+    "id": "U",
+    "name": "U",
+    "color": "#85cf7f"
+  },
+  {
+    "id": "V",
+    "name": "V",
+    "color": "#0d3008"
+  }
+]

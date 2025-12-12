@@ -1,0 +1,6378 @@
+[
+  {
+    "code": 1033,
+    "name": "Centro Asturiano",
+    "position": {
+      "lat": 43.37984085083008,
+      "lng": -5.874971389770508
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1217,
+    "name": "Ules",
+    "position": {
+      "lat": 43.3788948059082,
+      "lng": -5.883243083953857
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1027,
+    "name": "Ctra. de Ules",
+    "position": {
+      "lat": 43.37748718261719,
+      "lng": -5.876645088195801
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1273,
+    "name": "Prerrománico",
+    "position": {
+      "lat": 43.37639236450195,
+      "lng": -5.86644172668457
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1123,
+    "name": "Las Delicias",
+    "position": {
+      "lat": 43.3748779296875,
+      "lng": -5.864383697509766
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1132,
+    "name": "Avda. Los Monumentos",
+    "position": {
+      "lat": 43.37186813354492,
+      "lng": -5.860133171081543
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1211,
+    "name": "Los Solises",
+    "position": {
+      "lat": 43.36949920654297,
+      "lng": -5.859875679016113
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1183,
+    "name": "Ramiro I",
+    "position": {
+      "lat": 43.363990783691406,
+      "lng": -5.860626697540283
+    },
+    "lines": [
+      "A",
+      "E"
+    ]
+  },
+  {
+    "code": 1214,
+    "name": "Samuel Sánchez",
+    "position": {
+      "lat": 43.36308670043945,
+      "lng": -5.859017372131348
+    },
+    "lines": [
+      "A",
+      "B",
+      "E",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 1096,
+    "name": "Independencia",
+    "position": {
+      "lat": 43.36481857299805,
+      "lng": -5.854865074157715
+    },
+    "lines": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "G",
+      "H",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1218,
+    "name": "Uría Centro",
+    "position": {
+      "lat": 43.36445999145508,
+      "lng": -5.852128982543945
+    },
+    "lines": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "H",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 4143,
+    "name": "Marques Sta. Cruz",
+    "position": {
+      "lat": 43.3614616394043,
+      "lng": -5.848471164703369
+    },
+    "lines": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1213,
+    "name": "Sta. Susana-Instituto",
+    "position": {
+      "lat": 43.35923767089844,
+      "lng": -5.850090980529785
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1204,
+    "name": "Sta. Susana",
+    "position": {
+      "lat": 43.357765197753906,
+      "lng": -5.848191738128662
+    },
+    "lines": [
+      "A",
+      "F",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1011,
+    "name": "Arz. Guisasola Campillín",
+    "position": {
+      "lat": 43.358638763427734,
+      "lng": -5.844415664672852
+    },
+    "lines": [
+      "A",
+      "F",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1010,
+    "name": "Arz. Guisasola",
+    "position": {
+      "lat": 43.35564422607422,
+      "lng": -5.843599796295166
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1200,
+    "name": "San Lázaro-Gil Blas",
+    "position": {
+      "lat": 43.353694915771484,
+      "lng": -5.8435893058776855
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1106,
+    "name": "Bolgachina 5",
+    "position": {
+      "lat": 43.35140609741211,
+      "lng": -5.843932628631592
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1105,
+    "name": "Bolgachina 46",
+    "position": {
+      "lat": 43.347389221191406,
+      "lng": -5.845348834991455
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1104,
+    "name": "La Merced",
+    "position": {
+      "lat": 43.34500503540039,
+      "lng": -5.843997001647949
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1107,
+    "name": "El Caserón",
+    "position": {
+      "lat": 43.34328842163086,
+      "lng": -5.844254493713379
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1135,
+    "name": "Los Prietos",
+    "position": {
+      "lat": 43.34024429321289,
+      "lng": -5.847580432891846
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1058,
+    "name": "Cruce Toral",
+    "position": {
+      "lat": 43.339324951171875,
+      "lng": -5.8539533615112305
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1023,
+    "name": "Cabornio",
+    "position": {
+      "lat": 43.336612701416016,
+      "lng": -5.856485366821289
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1122,
+    "name": "La Rodada",
+    "position": {
+      "lat": 43.33469009399414,
+      "lng": -5.857751369476318
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1047,
+    "name": "Cruce Llamaoscura",
+    "position": {
+      "lat": 43.328975677490234,
+      "lng": -5.861999988555908
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1118,
+    "name": "La Manjoya",
+    "position": {
+      "lat": 43.32943344116211,
+      "lng": -5.86820125579834
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1293,
+    "name": "F. L. C.",
+    "position": {
+      "lat": 43.32581329345703,
+      "lng": -5.872964859008789
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1325,
+    "name": "Cruce Latores",
+    "position": {
+      "lat": 43.330902099609375,
+      "lng": -5.873308181762695
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1291,
+    "name": "Centro Médico",
+    "position": {
+      "lat": 43.341556549072266,
+      "lng": -5.872106552124023
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1290,
+    "name": "Llamaquique",
+    "position": {
+      "lat": 43.35903549194336,
+      "lng": -5.856053352355957
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4024,
+    "name": "Calvo Sotelo-Colegio",
+    "position": {
+      "lat": 43.35725021362305,
+      "lng": -5.853781223297119
+    },
+    "lines": [
+      "A",
+      "B",
+      "C",
+      "G"
+    ]
+  },
+  {
+    "code": 4325,
+    "name": "Cruce Latores",
+    "position": {
+      "lat": 43.330902099609375,
+      "lng": -5.873308181762695
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4292,
+    "name": "F. L. C.",
+    "position": {
+      "lat": 43.32581329345703,
+      "lng": -5.872964859008789
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1269,
+    "name": "La Manjoya",
+    "position": {
+      "lat": 43.32943344116211,
+      "lng": -5.86820125579834
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4047,
+    "name": "Cruce Llamaoscura",
+    "position": {
+      "lat": 43.32896041870117,
+      "lng": -5.861012935638428
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4122,
+    "name": "La Rodada",
+    "position": {
+      "lat": 43.33469009399414,
+      "lng": -5.857751369476318
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4023,
+    "name": "Cabornio",
+    "position": {
+      "lat": 43.336578369140625,
+      "lng": -5.85646390914917
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4048,
+    "name": "Cruce Toral",
+    "position": {
+      "lat": 43.339324951171875,
+      "lng": -5.853888988494873
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4135,
+    "name": "Los Prietos",
+    "position": {
+      "lat": 43.34024429321289,
+      "lng": -5.847580432891846
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4107,
+    "name": "El Caserón",
+    "position": {
+      "lat": 43.34328842163086,
+      "lng": -5.844254493713379
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4104,
+    "name": "La Merced",
+    "position": {
+      "lat": 43.34502029418945,
+      "lng": -5.84397554397583
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4105,
+    "name": "Bolgachina 46",
+    "position": {
+      "lat": 43.347171783447266,
+      "lng": -5.845155715942383
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4106,
+    "name": "Bolgachina 5",
+    "position": {
+      "lat": 43.351200103759766,
+      "lng": -5.843696594238281
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4200,
+    "name": "San Lázaro",
+    "position": {
+      "lat": 43.35322570800781,
+      "lng": -5.842698574066162
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1158,
+    "name": "Padre Suarez I",
+    "position": {
+      "lat": 43.355064392089844,
+      "lng": -5.843557357788086
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1159,
+    "name": "Padre Suarez II",
+    "position": {
+      "lat": 43.35725021362305,
+      "lng": -5.842634677886963
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1142,
+    "name": "Gastañaga",
+    "position": {
+      "lat": 43.35929489135742,
+      "lng": -5.843921661376953
+    },
+    "lines": [
+      "A",
+      "F",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1144,
+    "name": "Martinez Marina",
+    "position": {
+      "lat": 43.358768463134766,
+      "lng": -5.846743583679199
+    },
+    "lines": [
+      "A",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1143,
+    "name": "Marqués Sta. Cruz",
+    "position": {
+      "lat": 43.36140060424805,
+      "lng": -5.848406791687012
+    },
+    "lines": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 1221,
+    "name": "Uria Sur",
+    "position": {
+      "lat": 43.362945556640625,
+      "lng": -5.8496270179748535
+    },
+    "lines": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1234,
+    "name": "Uría Centro",
+    "position": {
+      "lat": 43.364051818847656,
+      "lng": -5.851367473602295
+    },
+    "lines": [
+      "A",
+      "B",
+      "C",
+      "E",
+      "J"
+    ]
+  },
+  {
+    "code": 4220,
+    "name": "Uría Norte",
+    "position": {
+      "lat": 43.36585235595703,
+      "lng": -5.854071617126465
+    },
+    "lines": [
+      "A",
+      "B",
+      "E",
+      "J"
+    ]
+  },
+  {
+    "code": 4214,
+    "name": "Samuel Sánchez",
+    "position": {
+      "lat": 43.36347579956055,
+      "lng": -5.860047340393066
+    },
+    "lines": [
+      "A",
+      "B",
+      "E",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 4183,
+    "name": "Ramiro I",
+    "position": {
+      "lat": 43.3640251159668,
+      "lng": -5.860583782196045
+    },
+    "lines": [
+      "A",
+      "E"
+    ]
+  },
+  {
+    "code": 4211,
+    "name": "Los Solises",
+    "position": {
+      "lat": 43.36956024169922,
+      "lng": -5.85996150970459
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4132,
+    "name": "Avda. Los Monumentos",
+    "position": {
+      "lat": 43.37180709838867,
+      "lng": -5.860133171081543
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4123,
+    "name": "Las Delicias",
+    "position": {
+      "lat": 43.37484359741211,
+      "lng": -5.864381790161133
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4273,
+    "name": "Prerrománico",
+    "position": {
+      "lat": 43.37643814086914,
+      "lng": -5.86644172668457
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4027,
+    "name": "Ctra. Ules",
+    "position": {
+      "lat": 43.37757873535156,
+      "lng": -5.876612663269043
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 4217,
+    "name": "Ules",
+    "position": {
+      "lat": 43.37895202636719,
+      "lng": -5.883285999298096
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1239,
+    "name": "La Ribera",
+    "position": {
+      "lat": 43.3790283203125,
+      "lng": -5.881655216217041
+    },
+    "lines": [
+      "A"
+    ]
+  },
+  {
+    "code": 1077,
+    "name": "Fitoria",
+    "position": {
+      "lat": 43.382225036621094,
+      "lng": -5.842645168304443
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4126,
+    "name": "Lavadero",
+    "position": {
+      "lat": 43.380027770996094,
+      "lng": -5.844898223876953
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4179,
+    "name": "Prado de la fiesta",
+    "position": {
+      "lat": 43.3784065246582,
+      "lng": -5.8467864990234375
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4232,
+    "name": "Villamegil",
+    "position": {
+      "lat": 43.37693786621094,
+      "lng": -5.848267078399658
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4073,
+    "name": "Orfanato Minero",
+    "position": {
+      "lat": 43.37558364868164,
+      "lng": -5.847301483154297
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4216,
+    "name": "Torres de Pando",
+    "position": {
+      "lat": 43.37297821044922,
+      "lng": -5.843417644500732
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1094,
+    "name": "Grupo Jose Antonio",
+    "position": {
+      "lat": 43.37127685546875,
+      "lng": -5.843331813812256
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1014,
+    "name": "Avda. Pumarín",
+    "position": {
+      "lat": 43.36876678466797,
+      "lng": -5.844082832336426
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1079,
+    "name": "Foncalada I",
+    "position": {
+      "lat": 43.3662223815918,
+      "lng": -5.846292972564697
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 4080,
+    "name": "Foncalada II",
+    "position": {
+      "lat": 43.364524841308594,
+      "lng": -5.847151279449463
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 4025,
+    "name": "Calvo Sotelo-Instituto",
+    "position": {
+      "lat": 43.35896682739258,
+      "lng": -5.851282119750977
+    },
+    "lines": [
+      "B",
+      "C",
+      "G"
+    ]
+  },
+  {
+    "code": 4170,
+    "name": "Plaza La Paz",
+    "position": {
+      "lat": 43.35661315917969,
+      "lng": -5.857367992401123
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 1078,
+    "name": "Florez Estrada",
+    "position": {
+      "lat": 43.35637664794922,
+      "lng": -5.860873222351074
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 4171,
+    "name": "Plaza de Toros",
+    "position": {
+      "lat": 43.35862350463867,
+      "lng": -5.868512153625488
+    },
+    "lines": [
+      "B",
+      "D",
+      "F",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 4085,
+    "name": "Fuertes Acevedo",
+    "position": {
+      "lat": 43.357696533203125,
+      "lng": -5.871366024017334
+    },
+    "lines": [
+      "B",
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1012,
+    "name": "Av. La Coruña",
+    "position": {
+      "lat": 43.35768127441406,
+      "lng": -5.874303340911865
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1056,
+    "name": "Cuesta Olivares",
+    "position": {
+      "lat": 43.359527587890625,
+      "lng": -5.877127647399902
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1348,
+    "name": "Olivares",
+    "position": {
+      "lat": 43.359779357910156,
+      "lng": -5.879659652709961
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4056,
+    "name": "Cuesta Olivares",
+    "position": {
+      "lat": 43.3593635559082,
+      "lng": -5.877106189727783
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 4012,
+    "name": "Av. La Coruña",
+    "position": {
+      "lat": 43.35748291015625,
+      "lng": -5.874327659606934
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1085,
+    "name": "Fuertes Acevedo",
+    "position": {
+      "lat": 43.35771179199219,
+      "lng": -5.87117338180542
+    },
+    "lines": [
+      "B",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1171,
+    "name": "Plaza de Toros",
+    "position": {
+      "lat": 43.35860824584961,
+      "lng": -5.86815881729126
+    },
+    "lines": [
+      "B",
+      "C",
+      "D",
+      "F",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 4184,
+    "name": "Celestino Villamil",
+    "position": {
+      "lat": 43.357154846191406,
+      "lng": -5.865593910217285
+    },
+    "lines": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "code": 1016,
+    "name": "Avda. del Cristo",
+    "position": {
+      "lat": 43.35580062866211,
+      "lng": -5.860111713409424
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 1170,
+    "name": "Plaza La Paz",
+    "position": {
+      "lat": 43.356529235839844,
+      "lng": -5.857536792755127
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 1024,
+    "name": "Calvo Sotelo-Colegio",
+    "position": {
+      "lat": 43.35712432861328,
+      "lng": -5.853760242462158
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G"
+    ]
+  },
+  {
+    "code": 1025,
+    "name": "Calvo Sotelo-Instituto",
+    "position": {
+      "lat": 43.358848571777344,
+      "lng": -5.851217269897461
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "G"
+    ]
+  },
+  {
+    "code": 1219,
+    "name": "Uría La Llave",
+    "position": {
+      "lat": 43.364986419677734,
+      "lng": -5.852773189544678
+    },
+    "lines": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "code": 1082,
+    "name": "Fray Ceferino",
+    "position": {
+      "lat": 43.366783142089844,
+      "lng": -5.850884914398193
+    },
+    "lines": [
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "code": 1083,
+    "name": "Fray Ceferino Estación Autobuses",
+    "position": {
+      "lat": 43.36835861206055,
+      "lng": -5.8492326736450195
+    },
+    "lines": [
+      "B",
+      "C",
+      "F",
+      "M"
+    ]
+  },
+  {
+    "code": 1071,
+    "name": "Evaristo Valle",
+    "position": {
+      "lat": 43.3704833984375,
+      "lng": -5.844855308532715
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1236,
+    "name": "Avda. Pando",
+    "position": {
+      "lat": 43.371150970458984,
+      "lng": -5.84322452545166
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1216,
+    "name": "Torres de Pando",
+    "position": {
+      "lat": 43.37274169921875,
+      "lng": -5.843052864074707
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1073,
+    "name": "Orfanato Minero",
+    "position": {
+      "lat": 43.375614166259766,
+      "lng": -5.847172737121582
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1232,
+    "name": "Villamegil",
+    "position": {
+      "lat": 43.37678146362305,
+      "lng": -5.84822416305542
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1179,
+    "name": "Prado de la fiesta",
+    "position": {
+      "lat": 43.378387451171875,
+      "lng": -5.84672212600708
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1126,
+    "name": "Lavadero",
+    "position": {
+      "lat": 43.38005828857422,
+      "lng": -5.844898223876953
+    },
+    "lines": [
+      "B"
+    ]
+  },
+  {
+    "code": 1055,
+    "name": "Cuatro Caños",
+    "position": {
+      "lat": 43.384002685546875,
+      "lng": -5.825436115264893
+    },
+    "lines": [
+      "B",
+      "C",
+      "V"
+    ]
+  },
+  {
+    "code": 1311,
+    "name": "Jaime Truyols",
+    "position": {
+      "lat": 43.38458251953125,
+      "lng": -5.8180975914001465
+    },
+    "lines": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "code": 1310,
+    "name": "Llaviada",
+    "position": {
+      "lat": 43.385704040527344,
+      "lng": -5.815930366516113
+    },
+    "lines": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "code": 4187,
+    "name": "Roces",
+    "position": {
+      "lat": 43.37782287597656,
+      "lng": -5.802326202392578
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4116,
+    "name": "La Iglesia - Colloto",
+    "position": {
+      "lat": 43.37812423706055,
+      "lng": -5.798656940460205
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4180,
+    "name": "Puente",
+    "position": {
+      "lat": 43.378929138183594,
+      "lng": -5.793158054351807
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1180,
+    "name": "Puente",
+    "position": {
+      "lat": 43.378807067871094,
+      "lng": -5.792884349822998
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1116,
+    "name": "La Iglesia - Colloto",
+    "position": {
+      "lat": 43.37797164916992,
+      "lng": -5.798635482788086
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1187,
+    "name": "Roces",
+    "position": {
+      "lat": 43.377403259277344,
+      "lng": -5.8029913902282715
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4070,
+    "name": "Espiritu Santo",
+    "position": {
+      "lat": 43.37569046020508,
+      "lng": -5.806832790374756
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4507,
+    "name": "Cruce Las Matas",
+    "position": {
+      "lat": 43.37372970581055,
+      "lng": -5.810801982879639
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4103,
+    "name": "La Barcena",
+    "position": {
+      "lat": 43.37224197387695,
+      "lng": -5.814192771911621
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4034,
+    "name": "Cerdeño",
+    "position": {
+      "lat": 43.36977767944336,
+      "lng": -5.818392753601074
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4172,
+    "name": "Plaza Lago Enol",
+    "position": {
+      "lat": 43.36894989013672,
+      "lng": -5.8252644538879395
+    },
+    "lines": [
+      "B",
+      "E"
+    ]
+  },
+  {
+    "code": 4186,
+    "name": "Río Sella",
+    "position": {
+      "lat": 43.36823272705078,
+      "lng": -5.828804969787598
+    },
+    "lines": [
+      "B",
+      "E"
+    ]
+  },
+  {
+    "code": 4185,
+    "name": "Río Caudal",
+    "position": {
+      "lat": 43.36674118041992,
+      "lng": -5.832645893096924
+    },
+    "lines": [
+      "B",
+      "E"
+    ]
+  },
+  {
+    "code": 4006,
+    "name": "Ángel Cañedo",
+    "position": {
+      "lat": 43.37030029296875,
+      "lng": -5.836465358734131
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1001,
+    "name": "Aureliano San Román",
+    "position": {
+      "lat": 43.370479583740234,
+      "lng": -5.839576721191406
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1002,
+    "name": "A. S. Román-Palladium",
+    "position": {
+      "lat": 43.37000274658203,
+      "lng": -5.842184066772461
+    },
+    "lines": [
+      "B",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1140,
+    "name": "Marcelino Suárez",
+    "position": {
+      "lat": 43.3646125793457,
+      "lng": -5.863319396972656
+    },
+    "lines": [
+      "B",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 1224,
+    "name": "Vázquez de Mella",
+    "position": {
+      "lat": 43.36579895019531,
+      "lng": -5.864274501800537
+    },
+    "lines": [
+      "B",
+      "E",
+      "F",
+      "O"
+    ]
+  },
+  {
+    "code": 1139,
+    "name": "Mantova",
+    "position": {
+      "lat": 43.367820739746094,
+      "lng": -5.865840911865234
+    },
+    "lines": [
+      "B",
+      "E",
+      "F",
+      "O"
+    ]
+  },
+  {
+    "code": 1256,
+    "name": "Plaza G. Díaz Merchán",
+    "position": {
+      "lat": 43.36836624145508,
+      "lng": -5.868179798126221
+    },
+    "lines": [
+      "B",
+      "E",
+      "F",
+      "O"
+    ]
+  },
+  {
+    "code": 1257,
+    "name": "Manuel del Fresno",
+    "position": {
+      "lat": 43.367156982421875,
+      "lng": -5.866002082824707
+    },
+    "lines": [
+      "B",
+      "E",
+      "F",
+      "O"
+    ]
+  },
+  {
+    "code": 4224,
+    "name": "Vázquez de Mella",
+    "position": {
+      "lat": 43.36568832397461,
+      "lng": -5.864295959472656
+    },
+    "lines": [
+      "B",
+      "F"
+    ]
+  },
+  {
+    "code": 1008,
+    "name": "Argañosa-Puente Nuevo",
+    "position": {
+      "lat": 43.364803314208984,
+      "lng": -5.865111351013184
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1178,
+    "name": "Porticos II",
+    "position": {
+      "lat": 43.365692138671875,
+      "lng": -5.869081020355225
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1127,
+    "name": "Lavapiés",
+    "position": {
+      "lat": 43.36505126953125,
+      "lng": -5.872664451599121
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1084,
+    "name": "Fuente La Plata",
+    "position": {
+      "lat": 43.364200592041016,
+      "lng": -5.876323223114014
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4258,
+    "name": "Las Campas I",
+    "position": {
+      "lat": 43.36500549316406,
+      "lng": -5.884873867034912
+    },
+    "lines": [
+      "B",
+      "E",
+      "J"
+    ]
+  },
+  {
+    "code": 1274,
+    "name": "Las Campas II",
+    "position": {
+      "lat": 43.364803314208984,
+      "lng": -5.887770652770996
+    },
+    "lines": [
+      "B",
+      "E",
+      "J"
+    ]
+  },
+  {
+    "code": 1124,
+    "name": "Las Mazas",
+    "position": {
+      "lat": 43.3594970703125,
+      "lng": -5.893242359161377
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1167,
+    "name": "Pedruño",
+    "position": {
+      "lat": 43.36002731323242,
+      "lng": -5.900452136993408
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1117,
+    "name": "La Lloral",
+    "position": {
+      "lat": 43.36074447631836,
+      "lng": -5.905966758728027
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1059,
+    "name": "El Bloque",
+    "position": {
+      "lat": 43.36103439331055,
+      "lng": -5.909032344818115
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1113,
+    "name": "La Cruz II",
+    "position": {
+      "lat": 43.36099624633789,
+      "lng": -5.91139554977417
+    },
+    "lines": [
+      "B",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 1112,
+    "name": "La Cruz I",
+    "position": {
+      "lat": 43.360145568847656,
+      "lng": -5.9151291847229
+    },
+    "lines": [
+      "B",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 1201,
+    "name": "San Roque",
+    "position": {
+      "lat": 43.35932159423828,
+      "lng": -5.917806148529053
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1029,
+    "name": "Casa Sandalio",
+    "position": {
+      "lat": 43.35699462890625,
+      "lng": -5.919088363647461
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 1196,
+    "name": "San Claudio Estación",
+    "position": {
+      "lat": 43.3554801940918,
+      "lng": -5.918602466583252
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4196,
+    "name": "San Claudio Estación",
+    "position": {
+      "lat": 43.355323791503906,
+      "lng": -5.918216228485107
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4029,
+    "name": "Casa Sandalio",
+    "position": {
+      "lat": 43.35691833496094,
+      "lng": -5.918948650360107
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4201,
+    "name": "San Roque",
+    "position": {
+      "lat": 43.359317779541016,
+      "lng": -5.917795181274414
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4112,
+    "name": "La Cruz I",
+    "position": {
+      "lat": 43.36011505126953,
+      "lng": -5.91512393951416
+    },
+    "lines": [
+      "B",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 4113,
+    "name": "La Cruz II",
+    "position": {
+      "lat": 43.36099624633789,
+      "lng": -5.91139554977417
+    },
+    "lines": [
+      "B",
+      "J",
+      "O"
+    ]
+  },
+  {
+    "code": 4059,
+    "name": "El Bloque",
+    "position": {
+      "lat": 43.36103439331055,
+      "lng": -5.909032344818115
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4117,
+    "name": "La Lloral",
+    "position": {
+      "lat": 43.36074447631836,
+      "lng": -5.905966758728027
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4167,
+    "name": "Pedruño",
+    "position": {
+      "lat": 43.36002731323242,
+      "lng": -5.900452136993408
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4124,
+    "name": "Las Mazas",
+    "position": {
+      "lat": 43.3594970703125,
+      "lng": -5.893242359161377
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4084,
+    "name": "Isidoro Rodriguez",
+    "position": {
+      "lat": 43.36324691772461,
+      "lng": -5.878275394439697
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4503,
+    "name": "Martínez-Cachero",
+    "position": {
+      "lat": 43.36384963989258,
+      "lng": -5.873898506164551
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4178,
+    "name": "Pórticos II",
+    "position": {
+      "lat": 43.36530303955078,
+      "lng": -5.868995189666748
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4195,
+    "name": "San Antonio",
+    "position": {
+      "lat": 43.365116119384766,
+      "lng": -5.8663129806518555
+    },
+    "lines": [
+      "B",
+      "J"
+    ]
+  },
+  {
+    "code": 4502,
+    "name": "Marcelino Suárez",
+    "position": {
+      "lat": 43.36454391479492,
+      "lng": -5.863362789154053
+    },
+    "lines": [
+      "B",
+      "O"
+    ]
+  },
+  {
+    "code": 1009,
+    "name": "Argüelles",
+    "position": {
+      "lat": 43.363067626953125,
+      "lng": -5.846035480499268
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1099,
+    "name": "Jovellanos",
+    "position": {
+      "lat": 43.36361312866211,
+      "lng": -5.842687606811523
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1233,
+    "name": "Tenderina Alta",
+    "position": {
+      "lat": 43.364166259765625,
+      "lng": -5.837532997131348
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1065,
+    "name": "El Recreo",
+    "position": {
+      "lat": 43.365447998046875,
+      "lng": -5.832050323486328
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1040,
+    "name": "Cordero",
+    "position": {
+      "lat": 43.366432189941406,
+      "lng": -5.829115867614746
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1228,
+    "name": "Ventanielles",
+    "position": {
+      "lat": 43.36766052246094,
+      "lng": -5.825355529785156
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1160,
+    "name": "Palais",
+    "position": {
+      "lat": 43.368255615234375,
+      "lng": -5.823580265045166
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1034,
+    "name": "Cerdeño",
+    "position": {
+      "lat": 43.36968231201172,
+      "lng": -5.818306922912598
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1103,
+    "name": "La Barcena",
+    "position": {
+      "lat": 43.37213134765625,
+      "lng": -5.813967227935791
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1507,
+    "name": "Cruce Las Matas",
+    "position": {
+      "lat": 43.37372970581055,
+      "lng": -5.810801982879639
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 1070,
+    "name": "Espiritu Santo",
+    "position": {
+      "lat": 43.37555694580078,
+      "lng": -5.806800365447998
+    },
+    "lines": [
+      "B",
+      "H"
+    ]
+  },
+  {
+    "code": 4310,
+    "name": "Llaviada",
+    "position": {
+      "lat": 43.38567352294922,
+      "lng": -5.816788673400879
+    },
+    "lines": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "code": 1246,
+    "name": "Ignacio Herrero I",
+    "position": {
+      "lat": 43.38624954223633,
+      "lng": -5.819985866546631
+    },
+    "lines": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "code": 1247,
+    "name": "Ignacio Herrero II",
+    "position": {
+      "lat": 43.38406753540039,
+      "lng": -5.820972919464111
+    },
+    "lines": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "code": 1266,
+    "name": "Facultades",
+    "position": {
+      "lat": 43.354576110839844,
+      "lng": -5.872439384460449
+    },
+    "lines": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "code": 1017,
+    "name": "Avda. del Cristo - J. Clavería",
+    "position": {
+      "lat": 43.35343551635742,
+      "lng": -5.868802070617676
+    },
+    "lines": [
+      "C",
+      "D",
+      "K"
+    ]
+  },
+  {
+    "code": 4102,
+    "name": "Julián Clavería II",
+    "position": {
+      "lat": 43.35643005371094,
+      "lng": -5.869649887084961
+    },
+    "lines": [
+      "C",
+      "D",
+      "F"
+    ]
+  },
+  {
+    "code": 1260,
+    "name": "Miguel Casas Marín",
+    "position": {
+      "lat": 43.36942672729492,
+      "lng": -5.847451686859131
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1038,
+    "name": "Melquiades Cabal",
+    "position": {
+      "lat": 43.36812210083008,
+      "lng": -5.843986511230469
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1206,
+    "name": "Santullano",
+    "position": {
+      "lat": 43.368865966796875,
+      "lng": -5.838782787322998
+    },
+    "lines": [
+      "C",
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1019,
+    "name": "Avda. del Mar",
+    "position": {
+      "lat": 43.371273040771484,
+      "lng": -5.837677478790283
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1067,
+    "name": "El Villar",
+    "position": {
+      "lat": 43.37361526489258,
+      "lng": -5.836519241333008
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1326,
+    "name": "HUCA",
+    "position": {
+      "lat": 43.37515640258789,
+      "lng": -5.830134868621826
+    },
+    "lines": [
+      "C",
+      "D",
+      "F",
+      "V"
+    ]
+  },
+  {
+    "code": 1177,
+    "name": "Pontón de Vaqueros",
+    "position": {
+      "lat": 43.37757873535156,
+      "lng": -5.832940578460693
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1114,
+    "name": "La Estrecha",
+    "position": {
+      "lat": 43.3807487487793,
+      "lng": -5.828815460205078
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1042,
+    "name": "Corredoria Baja",
+    "position": {
+      "lat": 43.387638092041016,
+      "lng": -5.821638107299805
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1182,
+    "name": "Puente Nora",
+    "position": {
+      "lat": 43.39253234863281,
+      "lng": -5.81801176071167
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1133,
+    "name": "Los Peñones",
+    "position": {
+      "lat": 43.39677429199219,
+      "lng": -5.81425666809082
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1049,
+    "name": "Cruce Viejo",
+    "position": {
+      "lat": 43.399784088134766,
+      "lng": -5.811681747436523
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1013,
+    "name": "Avda. de Oviedo",
+    "position": {
+      "lat": 43.40318298339844,
+      "lng": -5.8084845542907715
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1048,
+    "name": "Didier",
+    "position": {
+      "lat": 43.404632568359375,
+      "lng": -5.809364318847656
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1138,
+    "name": "Lugones",
+    "position": {
+      "lat": 43.40391540527344,
+      "lng": -5.8112311363220215
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4049,
+    "name": "Cruce Viejo",
+    "position": {
+      "lat": 43.40074920654297,
+      "lng": -5.811437129974365
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4133,
+    "name": "Los Peñones",
+    "position": {
+      "lat": 43.39686965942383,
+      "lng": -5.814213752746582
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4182,
+    "name": "Puente Nora",
+    "position": {
+      "lat": 43.3925666809082,
+      "lng": -5.818033218383789
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4042,
+    "name": "Corredoria Baja",
+    "position": {
+      "lat": 43.38765335083008,
+      "lng": -5.8217668533325195
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4055,
+    "name": "Cuatro Caños",
+    "position": {
+      "lat": 43.3841438293457,
+      "lng": -5.825414657592773
+    },
+    "lines": [
+      "C",
+      "V"
+    ]
+  },
+  {
+    "code": 4114,
+    "name": "La Estrecha",
+    "position": {
+      "lat": 43.38111877441406,
+      "lng": -5.828912258148193
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 5006,
+    "name": "Pontón de Vaqueros 1",
+    "position": {
+      "lat": 43.377647399902344,
+      "lng": -5.833128929138184
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4177,
+    "name": "Pontón de Vaqueros",
+    "position": {
+      "lat": 43.377140045166016,
+      "lng": -5.833654403686523
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4067,
+    "name": "El Villar",
+    "position": {
+      "lat": 43.3735237121582,
+      "lng": -5.836701393127441
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1022,
+    "name": "Bermudez de Castro",
+    "position": {
+      "lat": 43.36979293823242,
+      "lng": -5.838139057159424
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4206,
+    "name": "Santullano",
+    "position": {
+      "lat": 43.368778228759766,
+      "lng": -5.838868618011475
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1259,
+    "name": "Fernando Vela",
+    "position": {
+      "lat": 43.36720275878906,
+      "lng": -5.844437122344971
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4260,
+    "name": "Buenaventura Paredes",
+    "position": {
+      "lat": 43.36867904663086,
+      "lng": -5.847022533416748
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 1261,
+    "name": "Estación de Autobuses",
+    "position": {
+      "lat": 43.36844253540039,
+      "lng": -5.851260185241699
+    },
+    "lines": [
+      "C",
+      "F"
+    ]
+  },
+  {
+    "code": 1220,
+    "name": "Uria Norte",
+    "position": {
+      "lat": 43.36585235595703,
+      "lng": -5.854071617126465
+    },
+    "lines": [
+      "C"
+    ]
+  },
+  {
+    "code": 4532,
+    "name": "Teodoro López Cuesta",
+    "position": {
+      "lat": 43.355003,
+      "lng": -5.863165
+    },
+    "lines": [
+      "C",
+      "F"
+    ]
+  },
+  {
+    "code": 4018,
+    "name": "Avda. del Cristo 54",
+    "position": {
+      "lat": 43.35457229614258,
+      "lng": -5.864895343780518
+    },
+    "lines": [
+      "C",
+      "F"
+    ]
+  },
+  {
+    "code": 4101,
+    "name": "Julian Clavería I",
+    "position": {
+      "lat": 43.35387420654297,
+      "lng": -5.868523120880127
+    },
+    "lines": [
+      "C",
+      "F"
+    ]
+  },
+  {
+    "code": 1207,
+    "name": "Silla del Rey",
+    "position": {
+      "lat": 43.36018753051758,
+      "lng": -5.863051414489746
+    },
+    "lines": [
+      "D",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1169,
+    "name": "Plaza América",
+    "position": {
+      "lat": 43.36076736450195,
+      "lng": -5.857375621795654
+    },
+    "lines": [
+      "D",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1035,
+    "name": "Cervantes",
+    "position": {
+      "lat": 43.36161804199219,
+      "lng": -5.854554176330566
+    },
+    "lines": [
+      "D",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1069,
+    "name": "Emilio Alarcos",
+    "position": {
+      "lat": 43.36686706542969,
+      "lng": -5.842535495758057
+    },
+    "lines": [
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1006,
+    "name": "Ángel Cañedo",
+    "position": {
+      "lat": 43.370487213134766,
+      "lng": -5.836570739746094
+    },
+    "lines": [
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 4510,
+    "name": "Sabino Fdez. Campo",
+    "position": {
+      "lat": 43.370243072509766,
+      "lng": -5.832881927490234
+    },
+    "lines": [
+      "D",
+      "F"
+    ]
+  },
+  {
+    "code": 1136,
+    "name": "Los Rosales",
+    "position": {
+      "lat": 43.37339782714844,
+      "lng": -5.824449062347412
+    },
+    "lines": [
+      "D",
+      "E"
+    ]
+  },
+  {
+    "code": 1332,
+    "name": "HUCA Urgencias",
+    "position": {
+      "lat": 43.3755989074707,
+      "lng": -5.822882652282715
+    },
+    "lines": [
+      "D",
+      "E",
+      "V"
+    ]
+  },
+  {
+    "code": 1333,
+    "name": "Alvarez \"Mendo\"",
+    "position": {
+      "lat": 43.377769470214844,
+      "lng": -5.82125186920166
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 1334,
+    "name": "Pza. de la Enseñanza",
+    "position": {
+      "lat": 43.379119873046875,
+      "lng": -5.8174967765808105
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 1335,
+    "name": "Centro de salud",
+    "position": {
+      "lat": 43.382164001464844,
+      "lng": -5.819041728973389
+    },
+    "lines": [
+      "D",
+      "V"
+    ]
+  },
+  {
+    "code": 1336,
+    "name": "FEVE",
+    "position": {
+      "lat": 43.38682556152344,
+      "lng": -5.808827877044678
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 1166,
+    "name": "Parque Principado",
+    "position": {
+      "lat": 43.39075469970703,
+      "lng": -5.802175998687744
+    },
+    "lines": [
+      "D",
+      "H"
+    ]
+  },
+  {
+    "code": 4516,
+    "name": "FEVE",
+    "position": {
+      "lat": 43.38682556152344,
+      "lng": -5.808892250061035
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 4515,
+    "name": "Centro de Salud",
+    "position": {
+      "lat": 43.38270568847656,
+      "lng": -5.819214820861816
+    },
+    "lines": [
+      "D",
+      "V"
+    ]
+  },
+  {
+    "code": 4514,
+    "name": "Pza. de la Enseñanza",
+    "position": {
+      "lat": 43.3795280456543,
+      "lng": -5.818204879760742
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 4513,
+    "name": "Alvarez \"Mendo\"",
+    "position": {
+      "lat": 43.37771987915039,
+      "lng": -5.821294784545898
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 4512,
+    "name": "HUCA Urgencias",
+    "position": {
+      "lat": 43.37571334838867,
+      "lng": -5.822668075561523
+    },
+    "lines": [
+      "D",
+      "V"
+    ]
+  },
+  {
+    "code": 4517,
+    "name": "Avda. Roma (Los Rosales)",
+    "position": {
+      "lat": 43.37319564819336,
+      "lng": -5.825554370880127
+    },
+    "lines": [
+      "D"
+    ]
+  },
+  {
+    "code": 1330,
+    "name": "Sabino Fernández Campo",
+    "position": {
+      "lat": 43.37019729614258,
+      "lng": -5.833022594451904
+    },
+    "lines": [
+      "D",
+      "F"
+    ]
+  },
+  {
+    "code": 1215,
+    "name": "Toreno",
+    "position": {
+      "lat": 43.3624153137207,
+      "lng": -5.85244607925415
+    },
+    "lines": [
+      "D",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 4169,
+    "name": "Avda. Galicia",
+    "position": {
+      "lat": 43.3609504699707,
+      "lng": -5.858137607574463
+    },
+    "lines": [
+      "D",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 4207,
+    "name": "Silla del Rey",
+    "position": {
+      "lat": 43.36006546020508,
+      "lng": -5.863766670227051
+    },
+    "lines": [
+      "D",
+      "F",
+      "G",
+      "H",
+      "L"
+    ]
+  },
+  {
+    "code": 1101,
+    "name": "Julian Clavería",
+    "position": {
+      "lat": 43.357601165771484,
+      "lng": -5.870813846588135
+    },
+    "lines": [
+      "D",
+      "H"
+    ]
+  },
+  {
+    "code": 1358,
+    "name": "Las Campas III",
+    "position": {
+      "lat": 43.36513137817383,
+      "lng": -5.886724472045898
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 4518,
+    "name": "Paseo La Florida",
+    "position": {
+      "lat": 43.36655807495117,
+      "lng": -5.882835388183594
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 4500,
+    "name": "La Florida I",
+    "position": {
+      "lat": 43.367313385009766,
+      "lng": -5.877556800842285
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 1271,
+    "name": "La Florida II",
+    "position": {
+      "lat": 43.36795425415039,
+      "lng": -5.872900485992432
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 1072,
+    "name": "Fco. Cambó Puente Nuevo",
+    "position": {
+      "lat": 43.3656120300293,
+      "lng": -5.863652229309082
+    },
+    "lines": [
+      "E",
+      "F"
+    ]
+  },
+  {
+    "code": 1081,
+    "name": "Fco. Cambó",
+    "position": {
+      "lat": 43.36653137207031,
+      "lng": -5.862450122833252
+    },
+    "lines": [
+      "E",
+      "F"
+    ]
+  },
+  {
+    "code": 1145,
+    "name": "Melquiades Alvarez",
+    "position": {
+      "lat": 43.36455154418945,
+      "lng": -5.850273609161377
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1080,
+    "name": "Foncalada II",
+    "position": {
+      "lat": 43.36454391479492,
+      "lng": -5.847140312194824
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1185,
+    "name": "Rio Caudal",
+    "position": {
+      "lat": 43.36812973022461,
+      "lng": -5.828890800476074
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1186,
+    "name": "Rio Sella",
+    "position": {
+      "lat": 43.36812973022461,
+      "lng": -5.828890800476074
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1172,
+    "name": "Plaza Lago Enol",
+    "position": {
+      "lat": 43.368934,
+      "lng": -5.825543
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1188,
+    "name": "Rubín",
+    "position": {
+      "lat": 43.370738,
+      "lng": -5.823324
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 1119,
+    "name": "La Monxina",
+    "position": {
+      "lat": 43.3760986328125,
+      "lng": -5.819041728973389
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 4136,
+    "name": "Los Rosales",
+    "position": {
+      "lat": 43.373504638671875,
+      "lng": -5.823043346405029
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 4188,
+    "name": "Rubín",
+    "position": {
+      "lat": 43.37088394165039,
+      "lng": -5.8232903480529785
+    },
+    "lines": [
+      "E"
+    ]
+  },
+  {
+    "code": 4081,
+    "name": "Fco. Cambó",
+    "position": {
+      "lat": 43.36643600463867,
+      "lng": -5.862834453582764
+    },
+    "lines": [
+      "E",
+      "F"
+    ]
+  },
+  {
+    "code": 4256,
+    "name": "Plaza G. Díaz Merchán",
+    "position": {
+      "lat": 43.368839263916016,
+      "lng": -5.86821174621582
+    },
+    "lines": [
+      "E",
+      "F",
+      "O"
+    ]
+  },
+  {
+    "code": 4271,
+    "name": "La Florida II",
+    "position": {
+      "lat": 43.36785888671875,
+      "lng": -5.874542236328125
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 1272,
+    "name": "La Florida I",
+    "position": {
+      "lat": 43.367515563964844,
+      "lng": -5.877524375915527
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 1337,
+    "name": "Paseo La Florida",
+    "position": {
+      "lat": 43.36681365966797,
+      "lng": -5.882813930511475
+    },
+    "lines": [
+      "E",
+      "O"
+    ]
+  },
+  {
+    "code": 4519,
+    "name": "Reyes Católicos",
+    "position": {
+      "lat": 43.372718811035156,
+      "lng": -5.834587574005127
+    },
+    "lines": [
+      "F",
+      "M"
+    ]
+  },
+  {
+    "code": 4520,
+    "name": "Jesús Saenz de Miera",
+    "position": {
+      "lat": 43.37238311767578,
+      "lng": -5.8469367027282715
+    },
+    "lines": [
+      "F",
+      "M"
+    ]
+  },
+  {
+    "code": 4154,
+    "name": "Coronel Bobes 10",
+    "position": {
+      "lat": 43.369285583496094,
+      "lng": -5.853180885314941
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4041,
+    "name": "Coronel Bobes",
+    "position": {
+      "lat": 43.370628356933594,
+      "lng": -5.852000713348389
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4146,
+    "name": "Menéndez y Pelayo",
+    "position": {
+      "lat": 43.37186050415039,
+      "lng": -5.855154991149902
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4128,
+    "name": "Lorenzo Abruñedo",
+    "position": {
+      "lat": 43.369895935058594,
+      "lng": -5.855498313903809
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1148,
+    "name": "Monte Auseva",
+    "position": {
+      "lat": 43.36844253540039,
+      "lng": -5.8539533615112305
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1339,
+    "name": "Naranjo de Bulnes",
+    "position": {
+      "lat": 43.36778259277344,
+      "lng": -5.856485366821289
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1130,
+    "name": "Cuatro Ases",
+    "position": {
+      "lat": 43.36836624145508,
+      "lng": -5.860240459442139
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4222,
+    "name": "I.O.Fdez.-Vega",
+    "position": {
+      "lat": 43.369590759277344,
+      "lng": -5.870657920837402
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1223,
+    "name": "H. Monte Naranco",
+    "position": {
+      "lat": 43.37031555175781,
+      "lng": -5.873072147369385
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1222,
+    "name": "I.O.Fdez.-Vega",
+    "position": {
+      "lat": 43.36958312988281,
+      "lng": -5.87069034576416
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4004,
+    "name": "Alejandro Casona",
+    "position": {
+      "lat": 43.363983154296875,
+      "lng": -5.864950180053711
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1141,
+    "name": "María P. Neira",
+    "position": {
+      "lat": 43.36201858520508,
+      "lng": -5.863711357116699
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1102,
+    "name": "Julian Clavería II",
+    "position": {
+      "lat": 43.356380462646484,
+      "lng": -5.869660377502441
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1263,
+    "name": "Julian Clavería I",
+    "position": {
+      "lat": 43.353790283203125,
+      "lng": -5.868544578552246
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1018,
+    "name": "Avda. del Cristo 65",
+    "position": {
+      "lat": 43.35446548461914,
+      "lng": -5.865079402923584
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1324,
+    "name": "Fernando Alonso 43",
+    "position": {
+      "lat": 43.35521697998047,
+      "lng": -5.842870712280273
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1238,
+    "name": "Fernando Alonso",
+    "position": {
+      "lat": 43.3576774597168,
+      "lng": -5.841336250305176
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1190,
+    "name": "S. Melchor G.Sampedro 28",
+    "position": {
+      "lat": 43.35732650756836,
+      "lng": -5.8402204513549805
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1191,
+    "name": "S. Melchor G.Sampedro 34",
+    "position": {
+      "lat": 43.35675811767578,
+      "lng": -5.8374505043029785
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1192,
+    "name": "S. Melchor G.Sampedro 78",
+    "position": {
+      "lat": 43.357173919677734,
+      "lng": -5.834770202636719
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1174,
+    "name": "Pza. de Otero",
+    "position": {
+      "lat": 43.35893630981445,
+      "lng": -5.834216594696045
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1276,
+    "name": "Fozaneldi",
+    "position": {
+      "lat": 43.36146926879883,
+      "lng": -5.836787223815918
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1057,
+    "name": "Darío Regoyos",
+    "position": {
+      "lat": 43.362213134765625,
+      "lng": -5.834856033325195
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1137,
+    "name": "Los Tilos",
+    "position": {
+      "lat": 43.36186218261719,
+      "lng": -5.833010673522949
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4521,
+    "name": "Alonso de Proaza",
+    "position": {
+      "lat": 43.36433410644531,
+      "lng": -5.83348274230957
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1340,
+    "name": "Alonso de Proaza",
+    "position": {
+      "lat": 43.36444091796875,
+      "lng": -5.833493232727051
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1341,
+    "name": "Vetusta",
+    "position": {
+      "lat": 43.36111831665039,
+      "lng": -5.832420825958252
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 4174,
+    "name": "Pza. de Otero",
+    "position": {
+      "lat": 43.35942077636719,
+      "lng": -5.833804607391357
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1231,
+    "name": "Villafría",
+    "position": {
+      "lat": 43.356502532958984,
+      "lng": -5.834963321685791
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1068,
+    "name": "Emigrantes Muérdago",
+    "position": {
+      "lat": 43.35658264160156,
+      "lng": -5.838139057159424
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1193,
+    "name": "S. Pedro Mestallón 23",
+    "position": {
+      "lat": 43.35774612426758,
+      "lng": -5.840052127838135
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1194,
+    "name": "S. Pedro Mestallón 3",
+    "position": {
+      "lat": 43.358829498291016,
+      "lng": -5.8414177894592285
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1176,
+    "name": "Campomanes, 26",
+    "position": {
+      "lat": 43.357802,
+      "lng": -5.847519
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1092,
+    "name": "Glez. Besada 16",
+    "position": {
+      "lat": 43.35636901855469,
+      "lng": -5.850173473358154
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1000,
+    "name": "A.Casona - María P. Neira",
+    "position": {
+      "lat": 43.362640380859375,
+      "lng": -5.8659749031066895
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1004,
+    "name": "Alejandro Casona",
+    "position": {
+      "lat": 43.36356735229492,
+      "lng": -5.865218639373779
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1153,
+    "name": "Montes del Sueve 1",
+    "position": {
+      "lat": 43.36906051635742,
+      "lng": -5.859253406524658
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1338,
+    "name": "Jesús Saenz de Miera",
+    "position": {
+      "lat": 43.37184143066406,
+      "lng": -5.847692966461182
+    },
+    "lines": [
+      "F",
+      "M"
+    ]
+  },
+  {
+    "code": 1249,
+    "name": "Reyes Católicos",
+    "position": {
+      "lat": 43.37246322631836,
+      "lng": -5.833804607391357
+    },
+    "lines": [
+      "F",
+      "M"
+    ]
+  },
+  {
+    "code": 5007,
+    "name": "H.U.C.A.",
+    "position": {
+      "lat": 43.375431060791016,
+      "lng": -5.830403804779053
+    },
+    "lines": [
+      "F"
+    ]
+  },
+  {
+    "code": 1284,
+    "name": "Puerto (Cabecera)",
+    "position": {
+      "lat": 43.31633377075195,
+      "lng": -5.925557613372803
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1285,
+    "name": "Cruce de Fuso",
+    "position": {
+      "lat": 43.318580627441406,
+      "lng": -5.928497314453125
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1283,
+    "name": "Puerto I",
+    "position": {
+      "lat": 43.32118606567383,
+      "lng": -5.932574272155762
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1287,
+    "name": "Puerto II",
+    "position": {
+      "lat": 43.32331085205078,
+      "lng": -5.931994915008545
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1289,
+    "name": "Cruce Siones",
+    "position": {
+      "lat": 43.328948974609375,
+      "lng": -5.9333415031433105
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1277,
+    "name": "Caces",
+    "position": {
+      "lat": 43.3314094543457,
+      "lng": -5.932552814483643
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1278,
+    "name": "Centro salud",
+    "position": {
+      "lat": 43.33123779296875,
+      "lng": -5.926394462585449
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1279,
+    "name": "Las Caldas",
+    "position": {
+      "lat": 43.33164596557617,
+      "lng": -5.924742221832275
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1280,
+    "name": "Campo de Golf",
+    "position": {
+      "lat": 43.32927322387695,
+      "lng": -5.9183478355407715
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1281,
+    "name": "Piñera",
+    "position": {
+      "lat": 43.334407806396484,
+      "lng": -5.915365219116211
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1288,
+    "name": "Cruce Sograndio",
+    "position": {
+      "lat": 43.34144592285156,
+      "lng": -5.9151506423950195
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1286,
+    "name": "La Corrapiedra",
+    "position": {
+      "lat": 43.34296798706055,
+      "lng": -5.910365581512451
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1046,
+    "name": "Cruce Las Caldas - Sta. Marina",
+    "position": {
+      "lat": 43.343929290771484,
+      "lng": -5.904550552368164
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1111,
+    "name": "La Casuca",
+    "position": {
+      "lat": 43.34759521484375,
+      "lng": -5.890474319458008
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1168,
+    "name": "Pin de la Quinta",
+    "position": {
+      "lat": 43.35044860839844,
+      "lng": -5.883586406707764
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1134,
+    "name": "Los Pinos",
+    "position": {
+      "lat": 43.35308837890625,
+      "lng": -5.8782219886779785
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1173,
+    "name": "Plaza Occidente",
+    "position": {
+      "lat": 43.3565673828125,
+      "lng": -5.874273777008057
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 1315,
+    "name": "Joaquín Villa Cañal",
+    "position": {
+      "lat": 43.35417556762695,
+      "lng": -5.861527919769287
+    },
+    "lines": [
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 1314,
+    "name": "Plaza Fernando Alvarez",
+    "position": {
+      "lat": 43.352439880371094,
+      "lng": -5.864424705505371
+    },
+    "lines": [
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 1329,
+    "name": "Piloña",
+    "position": {
+      "lat": 43.35202407836914,
+      "lng": -5.861711025238037
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4508,
+    "name": "Piloña",
+    "position": {
+      "lat": 43.35219955444336,
+      "lng": -5.861780166625977
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4314,
+    "name": "Plaza Fernando Alvarez",
+    "position": {
+      "lat": 43.35237503051758,
+      "lng": -5.864295959472656
+    },
+    "lines": [
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 4315,
+    "name": "Joaquín Villa Cañal",
+    "position": {
+      "lat": 43.35417556762695,
+      "lng": -5.861324310302734
+    },
+    "lines": [
+      "G",
+      "K"
+    ]
+  },
+  {
+    "code": 4173,
+    "name": "Plaza Occidente",
+    "position": {
+      "lat": 43.35675048828125,
+      "lng": -5.874335289001465
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4134,
+    "name": "Los Pinos",
+    "position": {
+      "lat": 43.35308837890625,
+      "lng": -5.8782219886779785
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4168,
+    "name": "Pin de La Quinta",
+    "position": {
+      "lat": 43.35044860839844,
+      "lng": -5.883586406707764
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4111,
+    "name": "La Casuca",
+    "position": {
+      "lat": 43.34759521484375,
+      "lng": -5.890474319458008
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4203,
+    "name": "Sta. Marina",
+    "position": {
+      "lat": 43.3446159362793,
+      "lng": -5.90142822265625
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4046,
+    "name": "Cruce Las Caldas",
+    "position": {
+      "lat": 43.34401321411133,
+      "lng": -5.9044108390808105
+    },
+    "lines": [
+      "G",
+      "L"
+    ]
+  },
+  {
+    "code": 4286,
+    "name": "La Corrapiedra",
+    "position": {
+      "lat": 43.34325408935547,
+      "lng": -5.906551361083984
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4288,
+    "name": "Cruce Sograndio",
+    "position": {
+      "lat": 43.34144592285156,
+      "lng": -5.915493965148926
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4275,
+    "name": "Piñera",
+    "position": {
+      "lat": 43.334407806396484,
+      "lng": -5.915365219116211
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4276,
+    "name": "Campo de Golf",
+    "position": {
+      "lat": 43.32927322387695,
+      "lng": -5.9183478355407715
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4277,
+    "name": "Las Caldas",
+    "position": {
+      "lat": 43.33194351196289,
+      "lng": -5.923712253570557
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4278,
+    "name": "Centro salud",
+    "position": {
+      "lat": 43.33135223388672,
+      "lng": -5.926716327667236
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4279,
+    "name": "Caces Plaza",
+    "position": {
+      "lat": 43.33175277709961,
+      "lng": -5.933132171630859
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4289,
+    "name": "Cruce Siones",
+    "position": {
+      "lat": 43.329036712646484,
+      "lng": -5.933614730834961
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4287,
+    "name": "Puerto II",
+    "position": {
+      "lat": 43.32331085205078,
+      "lng": -5.931994915008545
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4283,
+    "name": "Puerto I",
+    "position": {
+      "lat": 43.32129669189453,
+      "lng": -5.93311071395874
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 4285,
+    "name": "Cruce de Fuso",
+    "position": {
+      "lat": 43.318580627441406,
+      "lng": -5.928497314453125
+    },
+    "lines": [
+      "G"
+    ]
+  },
+  {
+    "code": 1098,
+    "name": "Serrano",
+    "position": {
+      "lat": 43.35651779174805,
+      "lng": -5.873243808746338
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1037,
+    "name": "Colloto",
+    "position": {
+      "lat": 43.37997817993164,
+      "lng": -5.787177085876465
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1093,
+    "name": "Granda (Muebles)",
+    "position": {
+      "lat": 43.382076263427734,
+      "lng": -5.781230449676514
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1262,
+    "name": "Estación de Viella",
+    "position": {
+      "lat": 43.388999938964844,
+      "lng": -5.786415100097656
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4262,
+    "name": "Estación de Viella",
+    "position": {
+      "lat": 43.38898468017578,
+      "lng": -5.786533355712891
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4093,
+    "name": "Granda",
+    "position": {
+      "lat": 43.38191223144531,
+      "lng": -5.783357620239258
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4037,
+    "name": "Colloto",
+    "position": {
+      "lat": 43.37985610961914,
+      "lng": -5.787134170532227
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4160,
+    "name": "Palais",
+    "position": {
+      "lat": 43.36837387084961,
+      "lng": -5.823676586151123
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4228,
+    "name": "Ventanielles",
+    "position": {
+      "lat": 43.36720657348633,
+      "lng": -5.827023983001709
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4040,
+    "name": "Cordero",
+    "position": {
+      "lat": 43.36652755737305,
+      "lng": -5.829255104064941
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 4065,
+    "name": "El Recreo",
+    "position": {
+      "lat": 43.36505889892578,
+      "lng": -5.834206581115723
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1003,
+    "name": "Adelantado de la Florida",
+    "position": {
+      "lat": 43.36429977416992,
+      "lng": -5.83922815322876
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1229,
+    "name": "Victor Chávarri",
+    "position": {
+      "lat": 43.365440368652344,
+      "lng": -5.843138694763184
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1086,
+    "name": "García Conde",
+    "position": {
+      "lat": 43.36400604248047,
+      "lng": -5.846266269683838
+    },
+    "lines": [
+      "H"
+    ]
+  },
+  {
+    "code": 1100,
+    "name": "Julian Cañedo",
+    "position": {
+      "lat": 43.35431671142578,
+      "lng": -5.839447975158691
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1157,
+    "name": "Otero",
+    "position": {
+      "lat": 43.35346221923828,
+      "lng": -5.84046745300293
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1359,
+    "name": "Purita de la Riva",
+    "position": {
+      "lat": 43.35425567626953,
+      "lng": -5.834909439086914
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1226,
+    "name": "Velasquita Giraldez I",
+    "position": {
+      "lat": 43.35347366333008,
+      "lng": -5.837226867675781
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1227,
+    "name": "Velasquita Giraldez II",
+    "position": {
+      "lat": 43.352500915527344,
+      "lng": -5.839801788330078
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1282,
+    "name": "Polideportivo",
+    "position": {
+      "lat": 43.35491943359375,
+      "lng": -5.923519134521484
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 4008,
+    "name": "Argañosa-Puente Nuevo",
+    "position": {
+      "lat": 43.36430358886719,
+      "lng": -5.864167213439941
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1181,
+    "name": "Puente La Argañosa",
+    "position": {
+      "lat": 43.363521575927734,
+      "lng": -5.861485004425049
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1268,
+    "name": "San Lázaro",
+    "position": {
+      "lat": 43.35335922241211,
+      "lng": -5.842752456665039
+    },
+    "lines": [
+      "J",
+      "L"
+    ]
+  },
+  {
+    "code": 4227,
+    "name": "Velasquita Giraldez II",
+    "position": {
+      "lat": 43.352500915527344,
+      "lng": -5.839801788330078
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 4226,
+    "name": "Velasquita Giraldez I",
+    "position": {
+      "lat": 43.35343551635742,
+      "lng": -5.837066173553467
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 4359,
+    "name": "Purita de la Riva",
+    "position": {
+      "lat": 43.35425567626953,
+      "lng": -5.834909439086914
+    },
+    "lines": [
+      "J"
+    ]
+  },
+  {
+    "code": 1125,
+    "name": "Latores",
+    "position": {
+      "lat": 43.335174560546875,
+      "lng": -5.877792835235596
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1052,
+    "name": "Ctra. Latores 27",
+    "position": {
+      "lat": 43.33698654174805,
+      "lng": -5.879401683807373
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1051,
+    "name": "Ctra. Latores 11",
+    "position": {
+      "lat": 43.34088897705078,
+      "lng": -5.88163423538208
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1036,
+    "name": "Col. Ángel de La Guarda",
+    "position": {
+      "lat": 43.342491149902344,
+      "lng": -5.8812689781188965
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1053,
+    "name": "Ctra. Latores 47",
+    "position": {
+      "lat": 43.347511291503906,
+      "lng": -5.8802714347839355
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1061,
+    "name": "El Campón 7",
+    "position": {
+      "lat": 43.34982681274414,
+      "lng": -5.878736972808838
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1131,
+    "name": "Los Depósitos",
+    "position": {
+      "lat": 43.352359771728516,
+      "lng": -5.875123500823975
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1074,
+    "name": "Avda. Cristo - Facultades",
+    "position": {
+      "lat": 43.3524169921875,
+      "lng": -5.8718061447143555
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1343,
+    "name": "Lena (OVIDA)",
+    "position": {
+      "lat": 43.35216522216797,
+      "lng": -5.867407321929932
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1357,
+    "name": "Aller",
+    "position": {
+      "lat": 43.349483489990234,
+      "lng": -5.866946220397949
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1344,
+    "name": "Hnos.Pidal",
+    "position": {
+      "lat": 43.358543395996094,
+      "lng": -5.857705593109131
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4501,
+    "name": "Plaza América - Iglesia",
+    "position": {
+      "lat": 43.360748291015625,
+      "lng": -5.857193470001221
+    },
+    "lines": [
+      "K",
+      "O"
+    ]
+  },
+  {
+    "code": 4524,
+    "name": "Hnos. Pidal",
+    "position": {
+      "lat": 43.35854721069336,
+      "lng": -5.857944488525391
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4531,
+    "name": "Aller",
+    "position": {
+      "lat": 43.349483489990234,
+      "lng": -5.867149829864502
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4523,
+    "name": "Lena (OVIDA)",
+    "position": {
+      "lat": 43.352073669433594,
+      "lng": -5.867643356323242
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4017,
+    "name": "Avda. Cristo - J.Clavería",
+    "position": {
+      "lat": 43.35336685180664,
+      "lng": -5.8687591552734375
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4074,
+    "name": "Avda. Cristo - Facultades",
+    "position": {
+      "lat": 43.352447509765625,
+      "lng": -5.871763229370117
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4131,
+    "name": "Los Depósitos",
+    "position": {
+      "lat": 43.352352142333984,
+      "lng": -5.875110626220703
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4061,
+    "name": "El Campón 7",
+    "position": {
+      "lat": 43.34978103637695,
+      "lng": -5.878779888153076
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4053,
+    "name": "Ctra. Latores 47",
+    "position": {
+      "lat": 43.34751510620117,
+      "lng": -5.880239009857178
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4036,
+    "name": "Col. Ángel de La Guarda",
+    "position": {
+      "lat": 43.34255599975586,
+      "lng": -5.881354808807373
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4051,
+    "name": "Ctra. Latores 11",
+    "position": {
+      "lat": 43.34086990356445,
+      "lng": -5.881655216217041
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 4052,
+    "name": "Ctra. Latores 27",
+    "position": {
+      "lat": 43.33707809448242,
+      "lng": -5.87942361831665
+    },
+    "lines": [
+      "K"
+    ]
+  },
+  {
+    "code": 1189,
+    "name": "San Andrés",
+    "position": {
+      "lat": 43.313053131103516,
+      "lng": -5.988471508026123
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1205,
+    "name": "Santiago",
+    "position": {
+      "lat": 43.32234191894531,
+      "lng": -5.992741584777832
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1225,
+    "name": "Vega",
+    "position": {
+      "lat": 43.33007049560547,
+      "lng": -5.988020896911621
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1202,
+    "name": "Sta. María",
+    "position": {
+      "lat": 43.33848571777344,
+      "lng": -5.98555326461792
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1031,
+    "name": "Cataluña",
+    "position": {
+      "lat": 43.343082427978516,
+      "lng": -5.9793195724487305
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1115,
+    "name": "La Fábrica",
+    "position": {
+      "lat": 43.34503936767578,
+      "lng": -5.972871780395508
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1267,
+    "name": "La Iglesia",
+    "position": {
+      "lat": 43.348793029785156,
+      "lng": -5.969707012176514
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1097,
+    "name": "Instituto",
+    "position": {
+      "lat": 43.35065460205078,
+      "lng": -5.96881628036499
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1147,
+    "name": "Molina",
+    "position": {
+      "lat": 43.3539924621582,
+      "lng": -5.966477394104004
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1212,
+    "name": "Soto de Arriba",
+    "position": {
+      "lat": 43.350154876708984,
+      "lng": -5.964009761810303
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1021,
+    "name": "Los Gallegos",
+    "position": {
+      "lat": 43.34941864013672,
+      "lng": -5.959761142730713
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1090,
+    "name": "Godos",
+    "position": {
+      "lat": 43.34482192993164,
+      "lng": -5.955480098724365
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1091,
+    "name": "Godos de Arriba",
+    "position": {
+      "lat": 43.341060638427734,
+      "lng": -5.949665069580078
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1210,
+    "name": "Sograndio de Abajo II",
+    "position": {
+      "lat": 43.34217834472656,
+      "lng": -5.947465896606445
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1209,
+    "name": "Sograndio de Abajo I",
+    "position": {
+      "lat": 43.34335708618164,
+      "lng": -5.941683292388916
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1208,
+    "name": "Sograndio",
+    "position": {
+      "lat": 43.34765625,
+      "lng": -5.9336042404174805
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1110,
+    "name": "Carretona",
+    "position": {
+      "lat": 43.345645904541016,
+      "lng": -5.919184684753418
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1026,
+    "name": "Cantu Colorao",
+    "position": {
+      "lat": 43.346065521240234,
+      "lng": -5.911867618560791
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1050,
+    "name": "Cruce Villafría",
+    "position": {
+      "lat": 43.351531982421875,
+      "lng": -5.838192939758301
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1129,
+    "name": "Cruce La Manjoya",
+    "position": {
+      "lat": 43.34977722167969,
+      "lng": -5.835918426513672
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1032,
+    "name": "Cementerio",
+    "position": {
+      "lat": 43.34928512573242,
+      "lng": -5.830371379852295
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1005,
+    "name": "Alto el Ferrador",
+    "position": {
+      "lat": 43.34850311279297,
+      "lng": -5.826369285583496
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1043,
+    "name": "Covadonga",
+    "position": {
+      "lat": 43.347679138183594,
+      "lng": -5.824073314666748
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1060,
+    "name": "El Caldero",
+    "position": {
+      "lat": 43.34770965576172,
+      "lng": -5.821831226348877
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1062,
+    "name": "El Cruce",
+    "position": {
+      "lat": 43.341617584228516,
+      "lng": -5.815867900848389
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1199,
+    "name": "San Esteban",
+    "position": {
+      "lat": 43.33867263793945,
+      "lng": -5.816812038421631
+    },
+    "lines": [
+      "L",
+      "U"
+    ]
+  },
+  {
+    "code": 1066,
+    "name": "El Tornero",
+    "position": {
+      "lat": 43.33344650268555,
+      "lng": -5.816552639007568
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1028,
+    "name": "Casa Adolfo",
+    "position": {
+      "lat": 43.329776763916016,
+      "lng": -5.819406509399414
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1161,
+    "name": "Pando",
+    "position": {
+      "lat": 43.326568603515625,
+      "lng": -5.823859214782715
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1240,
+    "name": "Manzaneda",
+    "position": {
+      "lat": 43.311851501464844,
+      "lng": -5.8252644538879395
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1250,
+    "name": "El Portazgo",
+    "position": {
+      "lat": 43.3053092956543,
+      "lng": -5.83423376083374
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1241,
+    "name": "Olloniego",
+    "position": {
+      "lat": 43.29909896850586,
+      "lng": -5.825650691986084
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4252,
+    "name": "Polígono Santianes",
+    "position": {
+      "lat": 43.311012268066406,
+      "lng": -5.819368839263916
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1252,
+    "name": "Santa Olaya",
+    "position": {
+      "lat": 43.31600570678711,
+      "lng": -5.812819004058838
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1242,
+    "name": "Tudela Agüeria",
+    "position": {
+      "lat": 43.31993865966797,
+      "lng": -5.802068710327148
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1243,
+    "name": "Anieves",
+    "position": {
+      "lat": 43.32493209838867,
+      "lng": -5.789880752563477
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1253,
+    "name": "T. Veguin RENFE",
+    "position": {
+      "lat": 43.33175277709961,
+      "lng": -5.776377201080322
+    },
+    "lines": [
+      "L",
+      "U"
+    ]
+  },
+  {
+    "code": 1254,
+    "name": "San Julian del Box",
+    "position": {
+      "lat": 43.333736419677734,
+      "lng": -5.769538879394531
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1255,
+    "name": "Entrepeñas",
+    "position": {
+      "lat": 43.334415435791016,
+      "lng": -5.759453773498535
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4254,
+    "name": "San Julián del Box",
+    "position": {
+      "lat": 43.333740234375,
+      "lng": -5.769538879394531
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4253,
+    "name": "T. Veguín RENFE",
+    "position": {
+      "lat": 43.331581115722656,
+      "lng": -5.77730655670166
+    },
+    "lines": [
+      "L",
+      "U"
+    ]
+  },
+  {
+    "code": 4243,
+    "name": "Anieves",
+    "position": {
+      "lat": 43.324886322021484,
+      "lng": -5.789902210235596
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4242,
+    "name": "Tudela Agüeria",
+    "position": {
+      "lat": 43.31995391845703,
+      "lng": -5.802090167999268
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4251,
+    "name": "Sta. Olaya",
+    "position": {
+      "lat": 43.31608200073242,
+      "lng": -5.812840461730957
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4241,
+    "name": "Olloniego",
+    "position": {
+      "lat": 43.299095153808594,
+      "lng": -5.825607776641846
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4250,
+    "name": "El Portazgo",
+    "position": {
+      "lat": 43.30540084838867,
+      "lng": -5.834341049194336
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4240,
+    "name": "Manzaneda",
+    "position": {
+      "lat": 43.311912536621094,
+      "lng": -5.825521945953369
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4161,
+    "name": "Pando",
+    "position": {
+      "lat": 43.325931549072266,
+      "lng": -5.824642181396484
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4028,
+    "name": "Casa Adolfo",
+    "position": {
+      "lat": 43.329803466796875,
+      "lng": -5.81951379776001
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4066,
+    "name": "El Torneru",
+    "position": {
+      "lat": 43.333473205566406,
+      "lng": -5.816659927368164
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4199,
+    "name": "San Esteban",
+    "position": {
+      "lat": 43.338626861572266,
+      "lng": -5.816616535186768
+    },
+    "lines": [
+      "L",
+      "U"
+    ]
+  },
+  {
+    "code": 4062,
+    "name": "Cruce San Esteban",
+    "position": {
+      "lat": 43.34577560424805,
+      "lng": -5.817110538482666
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4060,
+    "name": "El Caldero",
+    "position": {
+      "lat": 43.347694396972656,
+      "lng": -5.821863651275635
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4043,
+    "name": "Covadonga",
+    "position": {
+      "lat": 43.347679138183594,
+      "lng": -5.824094772338867
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4005,
+    "name": "Alto el Ferrador",
+    "position": {
+      "lat": 43.34854507446289,
+      "lng": -5.82625150680542
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4032,
+    "name": "Cementerio",
+    "position": {
+      "lat": 43.34926223754883,
+      "lng": -5.830425262451172
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4050,
+    "name": "Cruce Villafría",
+    "position": {
+      "lat": 43.35150909423828,
+      "lng": -5.838139057159424
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4026,
+    "name": "Cantu Colorao",
+    "position": {
+      "lat": 43.34609603881836,
+      "lng": -5.911974906921387
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4110,
+    "name": "Carretona",
+    "position": {
+      "lat": 43.34563064575195,
+      "lng": -5.919227600097656
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4208,
+    "name": "Sograndio",
+    "position": {
+      "lat": 43.34770584106445,
+      "lng": -5.933668613433838
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4209,
+    "name": "Sograndio de Abajo I",
+    "position": {
+      "lat": 43.34346008300781,
+      "lng": -5.941779613494873
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4210,
+    "name": "Sograndio de Abajo II",
+    "position": {
+      "lat": 43.342288970947266,
+      "lng": -5.94759464263916
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4091,
+    "name": "Godos de Arriba",
+    "position": {
+      "lat": 43.341102600097656,
+      "lng": -5.9497833251953125
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4090,
+    "name": "Godos",
+    "position": {
+      "lat": 43.34480285644531,
+      "lng": -5.955533981323242
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4021,
+    "name": "Los Gallegos",
+    "position": {
+      "lat": 43.34945297241211,
+      "lng": -5.959739685058594
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4212,
+    "name": "Soto de Arriba",
+    "position": {
+      "lat": 43.350215911865234,
+      "lng": -5.964159965515137
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4147,
+    "name": "Molina",
+    "position": {
+      "lat": 43.3539924621582,
+      "lng": -5.9664130210876465
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4097,
+    "name": "Instituto",
+    "position": {
+      "lat": 43.35113525390625,
+      "lng": -5.968666076660156
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4266,
+    "name": "La Iglesia-Trubia",
+    "position": {
+      "lat": 43.34873580932617,
+      "lng": -5.969846248626709
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4115,
+    "name": "La Fábrica",
+    "position": {
+      "lat": 43.34505081176758,
+      "lng": -5.973043441772461
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4031,
+    "name": "Cataluña",
+    "position": {
+      "lat": 43.34314727783203,
+      "lng": -5.97930908203125
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4202,
+    "name": "Sta. María",
+    "position": {
+      "lat": 43.338016510009766,
+      "lng": -5.985660552978516
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4225,
+    "name": "Vega",
+    "position": {
+      "lat": 43.33003616333008,
+      "lng": -5.9880852699279785
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 4205,
+    "name": "Santiago",
+    "position": {
+      "lat": 43.322357177734375,
+      "lng": -5.992848873138428
+    },
+    "lines": [
+      "L"
+    ]
+  },
+  {
+    "code": 1175,
+    "name": "Primo de Rivera",
+    "position": {
+      "lat": 43.36767578125,
+      "lng": -5.850391387939453
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1360,
+    "name": "Atenas (Los Prados)",
+    "position": {
+      "lat": 43.3714273,
+      "lng": -5.8298979
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1345,
+    "name": "Sariego",
+    "position": {
+      "lat": 43.369441986083984,
+      "lng": -5.820897579193115
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1265,
+    "name": "Cerdeño",
+    "position": {
+      "lat": 43.36930465698242,
+      "lng": -5.818178176879883
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1354,
+    "name": "Vixil",
+    "position": {
+      "lat": 43.36688995361328,
+      "lng": -5.809782981872559
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1361,
+    "name": "Geriátrico",
+    "position": {
+      "lat": 43.36675262451172,
+      "lng": -5.809171199798584
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1353,
+    "name": "Cuesta El Pendín I",
+    "position": {
+      "lat": 43.36626052856445,
+      "lng": -5.807401180267334
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1352,
+    "name": "La Ería 35",
+    "position": {
+      "lat": 43.364463806152344,
+      "lng": -5.805105209350586
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1320,
+    "name": "Villamiana-Casa Telva",
+    "position": {
+      "lat": 43.361610412597656,
+      "lng": -5.802841663360596
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1362,
+    "name": "Roces",
+    "position": {
+      "lat": 43.36052703857422,
+      "lng": -5.798957347869873
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1321,
+    "name": "Cruce Roces",
+    "position": {
+      "lat": 43.36165237426758,
+      "lng": -5.796918869018555
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1363,
+    "name": "Roces 8",
+    "position": {
+      "lat": 43.362030029296875,
+      "lng": -5.7947187423706055
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1322,
+    "name": "Cruce Caravia",
+    "position": {
+      "lat": 43.362430572509766,
+      "lng": -5.7885613441467285
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1323,
+    "name": "Caravia",
+    "position": {
+      "lat": 43.361793518066406,
+      "lng": -5.786640644073486
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1346,
+    "name": "Estatua",
+    "position": {
+      "lat": 43.361915588378906,
+      "lng": -5.783078670501709
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4323,
+    "name": "Caravia-Casa El Mancu",
+    "position": {
+      "lat": 43.3618278503418,
+      "lng": -5.786017894744873
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4322,
+    "name": "Cruce Caravia",
+    "position": {
+      "lat": 43.3625602722168,
+      "lng": -5.788416385650635
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4363,
+    "name": "Roces 8",
+    "position": {
+      "lat": 43.362030029296875,
+      "lng": -5.794832706451416
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4321,
+    "name": "Cruce Roces",
+    "position": {
+      "lat": 43.361812591552734,
+      "lng": -5.7969183921813965
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4362,
+    "name": "Roces",
+    "position": {
+      "lat": 43.361061096191406,
+      "lng": -5.799740314483643
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4319,
+    "name": "Villamiana 90",
+    "position": {
+      "lat": 43.358970642089844,
+      "lng": -5.800437927246094
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4075,
+    "name": "La Granja",
+    "position": {
+      "lat": 43.35752868652344,
+      "lng": -5.79732608795166
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4076,
+    "name": "Faro 8",
+    "position": {
+      "lat": 43.3573112487793,
+      "lng": -5.795637130737305
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4108,
+    "name": "La Capilla",
+    "position": {
+      "lat": 43.35564422607422,
+      "lng": -5.794730186462402
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4030,
+    "name": "Casa Severa",
+    "position": {
+      "lat": 43.35463333129883,
+      "lng": -5.793807506561279
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4045,
+    "name": "Cruce Barredo",
+    "position": {
+      "lat": 43.35298538208008,
+      "lng": -5.794247150421143
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4164,
+    "name": "Pando 36",
+    "position": {
+      "lat": 43.353492736816406,
+      "lng": -5.801897048950195
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4163,
+    "name": "Pando 32",
+    "position": {
+      "lat": 43.35411834716797,
+      "lng": -5.803592205047607
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4162,
+    "name": "Pando 13",
+    "position": {
+      "lat": 43.35613250732422,
+      "lng": -5.807368755340576
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4165,
+    "name": "Pando 9",
+    "position": {
+      "lat": 43.358097076416016,
+      "lng": -5.809793472290039
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4152,
+    "name": "Monte Rey 47",
+    "position": {
+      "lat": 43.360198974609375,
+      "lng": -5.812411308288574
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4151,
+    "name": "Monte Rey 31",
+    "position": {
+      "lat": 43.36247253417969,
+      "lng": -5.814868450164795
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4150,
+    "name": "Monte Rey 2",
+    "position": {
+      "lat": 43.362823486328125,
+      "lng": -5.8168745040893555
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4120,
+    "name": "La Muralla",
+    "position": {
+      "lat": 43.36454391479492,
+      "lng": -5.819396018981934
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4318,
+    "name": "Abuli",
+    "position": {
+      "lat": 43.36629867553711,
+      "lng": -5.817673683166504
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4265,
+    "name": "Cerdeño",
+    "position": {
+      "lat": 43.369354248046875,
+      "lng": -5.8178510665893555
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4530,
+    "name": "Noreña",
+    "position": {
+      "lat": 43.369903564453125,
+      "lng": -5.821112632751465
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 4360,
+    "name": "Atenas (Los Prados)",
+    "position": {
+      "lat": 43.371490478515625,
+      "lng": -5.829620361328125
+    },
+    "lines": [
+      "M"
+    ]
+  },
+  {
+    "code": 1317,
+    "name": "Lubrió",
+    "position": {
+      "lat": 43.3873291015625,
+      "lng": -5.918605327606201
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1316,
+    "name": "Loriana",
+    "position": {
+      "lat": 43.3797492980957,
+      "lng": -5.920107364654541
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4296,
+    "name": "Cruce Loriana",
+    "position": {
+      "lat": 43.372867584228516,
+      "lng": -5.919828414916992
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4506,
+    "name": "Fabarin",
+    "position": {
+      "lat": 43.38152313232422,
+      "lng": -5.929548740386963
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1294,
+    "name": "La Bolguina",
+    "position": {
+      "lat": 43.37955856323242,
+      "lng": -5.926330089569092
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1295,
+    "name": "Malpica",
+    "position": {
+      "lat": 43.37511444091797,
+      "lng": -5.926072597503662
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1296,
+    "name": "Cruce Loriana",
+    "position": {
+      "lat": 43.372867584228516,
+      "lng": -5.919828414916992
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1297,
+    "name": "Ponteo",
+    "position": {
+      "lat": 43.369998931884766,
+      "lng": -5.91688871383667
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1298,
+    "name": "El Torollo",
+    "position": {
+      "lat": 43.367393493652344,
+      "lng": -5.9161376953125
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1299,
+    "name": "San Claudio-San Roque",
+    "position": {
+      "lat": 43.359893798828125,
+      "lng": -5.917500019073486
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1300,
+    "name": "Cruce Ponteo",
+    "position": {
+      "lat": 43.36372756958008,
+      "lng": -5.90789794921875
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1301,
+    "name": "Villamar",
+    "position": {
+      "lat": 43.36742401123047,
+      "lng": -5.904185771942139
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4297,
+    "name": "Ponteo",
+    "position": {
+      "lat": 43.3701057434082,
+      "lng": -5.9169745445251465
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1304,
+    "name": "Lampajua",
+    "position": {
+      "lat": 43.37924575805664,
+      "lng": -5.908992290496826
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1305,
+    "name": "Lampaya",
+    "position": {
+      "lat": 43.379051208496094,
+      "lng": -5.903488636016846
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1306,
+    "name": "El Llano",
+    "position": {
+      "lat": 43.377952575683594,
+      "lng": -5.895388126373291
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1307,
+    "name": "Villamorsen",
+    "position": {
+      "lat": 43.37558364868164,
+      "lng": -5.8951520919799805
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1302,
+    "name": "Las Campas",
+    "position": {
+      "lat": 43.3719482421875,
+      "lng": -5.8896803855896
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 1303,
+    "name": "San Lázaro Paniceres",
+    "position": {
+      "lat": 43.37057113647461,
+      "lng": -5.884326457977295
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4303,
+    "name": "San Lázaro Paniceres",
+    "position": {
+      "lat": 43.37057113647461,
+      "lng": -5.884326457977295
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4302,
+    "name": "Las Campas",
+    "position": {
+      "lat": 43.3719482421875,
+      "lng": -5.8896803855896
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4307,
+    "name": "Villamorsen",
+    "position": {
+      "lat": 43.37558364868164,
+      "lng": -5.8951520919799805
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4306,
+    "name": "El Llano",
+    "position": {
+      "lat": 43.377952575683594,
+      "lng": -5.895388126373291
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4305,
+    "name": "Lampaya",
+    "position": {
+      "lat": 43.379051208496094,
+      "lng": -5.903488636016846
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4304,
+    "name": "Lampajua",
+    "position": {
+      "lat": 43.37924575805664,
+      "lng": -5.908992290496826
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4300,
+    "name": "Cruce Ponteo",
+    "position": {
+      "lat": 43.36372756958008,
+      "lng": -5.90789794921875
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4299,
+    "name": "San Claudio-San Roque",
+    "position": {
+      "lat": 43.359893798828125,
+      "lng": -5.917500019073486
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4298,
+    "name": "El Torollo",
+    "position": {
+      "lat": 43.367393493652344,
+      "lng": -5.9161376953125
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4295,
+    "name": "Malpica",
+    "position": {
+      "lat": 43.37511444091797,
+      "lng": -5.926072597503662
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4505,
+    "name": "La Bolguina",
+    "position": {
+      "lat": 43.37955856323242,
+      "lng": -5.926330089569092
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4316,
+    "name": "Loriana",
+    "position": {
+      "lat": 43.3797492980957,
+      "lng": -5.920107364654541
+    },
+    "lines": [
+      "O"
+    ]
+  },
+  {
+    "code": 4364,
+    "name": "Iglesia Box",
+    "position": {
+      "lat": 43.33308410644531,
+      "lng": -5.772416591644287
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4365,
+    "name": "Llaneza",
+    "position": {
+      "lat": 43.329959869384766,
+      "lng": -5.787350177764893
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4366,
+    "name": "Cortina",
+    "position": {
+      "lat": 43.32938003540039,
+      "lng": -5.795656681060791
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4367,
+    "name": "El Cantil",
+    "position": {
+      "lat": 43.33281326293945,
+      "lng": -5.798524856567383
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4368,
+    "name": "Llano del Río",
+    "position": {
+      "lat": 43.33853530883789,
+      "lng": -5.796285152435303
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4369,
+    "name": "Polleu",
+    "position": {
+      "lat": 43.33738708496094,
+      "lng": -5.803427219390869
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4370,
+    "name": "Bendones",
+    "position": {
+      "lat": 43.33930969238281,
+      "lng": -5.807666301727295
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 4371,
+    "name": "El Fresno",
+    "position": {
+      "lat": 43.34037399291992,
+      "lng": -5.8099517822265625
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1371,
+    "name": "El Fresno",
+    "position": {
+      "lat": 43.34025573730469,
+      "lng": -5.809968948364258
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1370,
+    "name": "Bendones",
+    "position": {
+      "lat": 43.33934783935547,
+      "lng": -5.807535648345947
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1369,
+    "name": "Polleu",
+    "position": {
+      "lat": 43.33660125732422,
+      "lng": -5.8022847175598145
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1368,
+    "name": "Llano del Río",
+    "position": {
+      "lat": 43.33831787109375,
+      "lng": -5.796566009521484
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1367,
+    "name": "El Cantil",
+    "position": {
+      "lat": 43.33234405517578,
+      "lng": -5.798574924468994
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1366,
+    "name": "Cortina",
+    "position": {
+      "lat": 43.32912063598633,
+      "lng": -5.7968010902404785
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1365,
+    "name": "Llaneza",
+    "position": {
+      "lat": 43.32970428466797,
+      "lng": -5.7877278327941895
+    },
+    "lines": [
+      "U"
+    ]
+  },
+  {
+    "code": 1380,
+    "name": "Quintana II",
+    "position": {
+      "lat": 43.40644073486328,
+      "lng": -5.863888740539551
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4379,
+    "name": "Quintana I",
+    "position": {
+      "lat": 43.407501220703125,
+      "lng": -5.85597038269043
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4378,
+    "name": "Nora II - Escuelas",
+    "position": {
+      "lat": 43.407833099365234,
+      "lng": -5.845417499542236
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4377,
+    "name": "Nora - Transformador",
+    "position": {
+      "lat": 43.40717697143555,
+      "lng": -5.840239524841309
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4376,
+    "name": "La Pedrera II - Puente Cayés",
+    "position": {
+      "lat": 43.40976333618164,
+      "lng": -5.836065769195557
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4375,
+    "name": "La Pedrera I - La Rabila",
+    "position": {
+      "lat": 43.40825653076172,
+      "lng": -5.830402851104736
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4374,
+    "name": "Laviada - Depuradora",
+    "position": {
+      "lat": 43.40054702758789,
+      "lng": -5.82676362991333
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4373,
+    "name": "La Granxa",
+    "position": {
+      "lat": 43.396575927734375,
+      "lng": -5.8255414962768555
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 4372,
+    "name": "IES La Corredoria",
+    "position": {
+      "lat": 43.38853454589844,
+      "lng": -5.825468063354492
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1372,
+    "name": "IES La Corredoria",
+    "position": {
+      "lat": 43.388519287109375,
+      "lng": -5.825227737426758
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1373,
+    "name": "La Granxa",
+    "position": {
+      "lat": 43.39673614501953,
+      "lng": -5.82543420791626
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1374,
+    "name": "Laviada - Depuradora",
+    "position": {
+      "lat": 43.400875091552734,
+      "lng": -5.82697868347168
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1375,
+    "name": "La Pedrera I - La Rabila",
+    "position": {
+      "lat": 43.408416748046875,
+      "lng": -5.8305745124816895
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1376,
+    "name": "La Pedrera II - Puente Cayés",
+    "position": {
+      "lat": 43.40986251831055,
+      "lng": -5.836012363433838
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1377,
+    "name": "Nora - Transformador",
+    "position": {
+      "lat": 43.40718078613281,
+      "lng": -5.840254306793213
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1378,
+    "name": "Nora II - Escuelas",
+    "position": {
+      "lat": 43.40788269042969,
+      "lng": -5.845020771026611
+    },
+    "lines": [
+      "V"
+    ]
+  },
+  {
+    "code": 1379,
+    "name": "Quintana I",
+    "position": {
+      "lat": 43.407501220703125,
+      "lng": -5.856136798858643
+    },
+    "lines": [
+      "V"
+    ]
+  }
+]
