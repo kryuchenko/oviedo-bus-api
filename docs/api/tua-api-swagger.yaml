@@ -152,7 +152,8 @@ paths:
             type: integer
             format: int64
             minimum: 1
-            example: 1001
+            examples:
+              - 1001
       responses:
         '200':
           description: Successful response with bus arrival data
@@ -386,15 +387,18 @@ components:
           type: integer
           format: int32
           description: Error code
-          example: 404
+          examples:
+            - 404
         message:
           type: string
           description: Error description
-          example: "Stop not found"
+          examples:
+            - "Stop not found"
         details:
           type: string
           description: Additional error information
-          example: "Stop with code 999999 does not exist"
+          examples:
+            - "Stop with code 999999 does not exist"
 
     # Additional models for Firebase (not REST API)
     Stop:
@@ -407,25 +411,30 @@ components:
           type: integer
           format: int64
           description: Stop code
-          example: 1001
+          examples:
+            - 1001
         compoundId:
           type: string
           description: Compound stop identifier
-          example: "E@1001"
+          examples:
+            - "E@1001"
         name:
           type: string
           description: Stop name
-          example: "Plaza de América"
+          examples:
+            - "Plaza de América"
         latitude:
           type: number
           format: double
           description: Stop latitude
-          example: 43.363233
+          examples:
+            - 43.363233
         longitude:
           type: number
           format: double
           description: Stop longitude
-          example: -5.849429
+          examples:
+            - -5.849429
         order:
           type: integer
           format: int64
@@ -448,7 +457,8 @@ components:
         name:
           type: string
           description: Group name (line letter)
-          example: "E"
+          examples:
+            - "E"
         lines:
           type: array
           description: Lines in group
@@ -464,11 +474,13 @@ components:
         name:
           type: string
           description: Line name with direction
-          example: "E - Las Campas - La Monxina"
+          examples:
+            - "E - Las Campas - La Monxina"
         route:
           type: string
           description: URL to route file in Firebase Storage
-          example: "https://firebasestorage.googleapis.com/v0/b/project/o/routes%2FE.json"
+          examples:
+            - "https://firebasestorage.googleapis.com/v0/b/project/o/routes%2FE.json"
 
     Link:
       type: object
@@ -477,7 +489,8 @@ components:
         name:
           type: string
           description: Related line identifier (letter)
-          example: "D"
+          examples:
+            - "D"
 
     Route:
       type: object
@@ -488,15 +501,18 @@ components:
         LINEA:
           type: string
           description: Encoded polyline string of route
-          example: "qg~fF~gmiU_A@_@?"
+          examples:
+            - "qg~fF~gmiU_A@_@?"
         COLOR:
           type: string
           description: Line color in HEX format (without #)
-          example: "FF0000"
+          examples:
+            - "FF0000"
         NOMBRE:
           type: string
           description: Route name with endpoints
-          example: "E - Las Campas - La Monxina"
+          examples:
+            - "E - Las Campas - La Monxina"
 
   securitySchemes:
     {}

@@ -74,20 +74,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GroupsResponse'
-              example:
-                documents:
-                  - name: "projects/alsa-tua/databases/(default)/documents/groups/A"
-                    fields:
-                      ACCESIBILIDAD:
-                        stringValue: "Accesible"
-                      COLOR:
-                        stringValue: "#ec743d"
-                      HORARIOS:
-                        stringValue: "<html>Schedule content...</html>"
-                      LINEA:
-                        stringValue: "A"
-                    createTime: "2024-01-15T10:30:00Z"
-                    updateTime: "2024-01-15T10:30:00Z"
+              examples:
+                groupExample:
+                  value:
+                    documents:
+                      - name: "projects/alsa-tua/databases/(default)/documents/groups/A"
+                        fields:
+                          ACCESIBILIDAD:
+                            stringValue: "Accesible"
+                          COLOR:
+                            stringValue: "#ec743d"
+                          HORARIOS:
+                            stringValue: "<html>Schedule content...</html>"
+                          LINEA:
+                            stringValue: "A"
+                        createTime: "2024-01-15T10:30:00Z"
+                        updateTime: "2024-01-15T10:30:00Z"
 
   /projects/alsa-tua/databases/(default)/documents/groups/{groupId}/lines:
     get:
@@ -159,24 +161,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StopsResponse'
-              example:
-                documents:
-                  - name: "projects/alsa-tua/databases/(default)/documents/groups/A/lines/1/stops/1001"
-                    fields:
-                      CODIGO:
-                        integerValue: "1001"
-                      COLOR:
-                        stringValue: "#ec743d"
-                      LINEA:
-                        stringValue: "A1"
-                      NOMBRE:
-                        stringValue: "Aureliano San Román"
-                      ORDEN:
-                        integerValue: "1"
-                      UBICACION:
-                        geoPointValue:
-                          latitude: 43.36264038085938
-                          longitude: -5.865974903106689
+              examples:
+                stopExample:
+                  value:
+                    documents:
+                      - name: "projects/alsa-tua/databases/(default)/documents/groups/A/lines/1/stops/1001"
+                        fields:
+                          CODIGO:
+                            integerValue: "1001"
+                          COLOR:
+                            stringValue: "#ec743d"
+                          LINEA:
+                            stringValue: "A1"
+                          NOMBRE:
+                            stringValue: "Aureliano San Román"
+                          ORDEN:
+                            integerValue: "1"
+                          UBICACION:
+                            geoPointValue:
+                              latitude: 43.36264038085938
+                              longitude: -5.865974903106689
 
   /projects/alsa-tua/databases/(default)/documents/prices:
     get:
