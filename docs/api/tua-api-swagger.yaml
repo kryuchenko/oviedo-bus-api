@@ -247,7 +247,6 @@ paths:
 components:
   schemas:
     StopInfo:
-      $id: StopInfo
       type: object
       description: Root response object with stop information
       required:
@@ -257,7 +256,6 @@ components:
           $ref: '#/components/schemas/ValueInfo'
 
     ValueInfo:
-      $id: ValueInfo
       type: object
       description: Wrapper for arrival estimations array
       required:
@@ -270,7 +268,6 @@ components:
             $ref: '#/components/schemas/LineEstimation'
 
     LineEstimation:
-      $id: LineEstimation
       type: object
       description: Information about bus arrivals on specific line
       required:
@@ -310,7 +307,6 @@ components:
           description: Third bus, null if not available
 
     Estimation:
-      $id: Estimation
       type: object
       description: Information about specific bus
       required:
