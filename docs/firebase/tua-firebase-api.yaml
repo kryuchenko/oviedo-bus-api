@@ -4,13 +4,16 @@ info:
   title: TUA Firebase Firestore API
   version: 1.0.0
   description: |
-    **Unofficial documentation** for TUA bus data stored in Firebase Firestore.
+    ⚠️ **UNOFFICIAL DOCUMENTATION** - Reverse-engineered for educational purposes. Not affiliated with Google, Firebase, TUA, or ALSA.
 
-    ⚠️ **DISCLAIMER:**
-    - This is **NOT official** Google or TUA documentation
-    - Reverse-engineered for educational purposes
-    - API belongs to Google (Firebase) and TUA (data)
-    - Not affiliated with Google, Firebase, TUA, or ALSA
+    Firebase Firestore API for TUA bus static data (stops, routes, schedules).
+
+    ## ⚠️ Important Disclaimers
+    - **NOT official** Google or TUA documentation
+    - API belongs to Google (Firebase), data belongs to TUA/ALSA
+    - Using this API key may violate Firebase Terms of Service
+    - Educational/research purposes only
+    - ❌ **No CORS** - Browser requests may be blocked (use backend code recommended)
 
     ## Overview
 
