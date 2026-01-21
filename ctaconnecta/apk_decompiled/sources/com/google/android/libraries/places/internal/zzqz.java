@@ -1,0 +1,25 @@
+package com.google.android.libraries.places.internal;
+
+import java.util.Set;
+import java.util.logging.Level;
+
+/* compiled from: com.google.android.libraries.places:places@@3.5.0 */
+/* loaded from: classes3.dex */
+final class zzqz extends zzqp {
+    private final zzpu zza;
+    private final Level zzb;
+    private final Set zzc;
+    private final zzqh zzd;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    zzqz(String str, String str2, boolean z, zzpu zzpuVar, boolean z2, boolean z3) {
+        super(str2);
+        Level level = Level.ALL;
+        Set set = zzrb.zza;
+        zzqh zzqhVar = zzrb.zzb;
+        this.zza = zzpuVar;
+        this.zzb = level;
+        this.zzc = set;
+        this.zzd = zzqhVar;
+    }
+}

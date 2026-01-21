@@ -1,0 +1,1543 @@
+openapi: 3.1.0
+info:
+  title: CTA (Consorcio de Transportes de Asturias) API
+  description: |
+    # 🚌 CTA API - Documentation
+
+    API for obtaining real-time information about metropolitan buses in Asturias.
+
+    ## 📊 API Capabilities
+
+    This API provides data about:
+    - ✅ **Stops** with GPS coordinates (WGS84)
+    - ✅ **Routes** and directions
+    - ✅ **Arrival estimates** for buses at stops
+    - ✅ **Real-time GPS coordinates** of buses in motion with telemetry
+    - ✅ **Timetables** of operation
+    - ✅ **Transport cards** and recharging
+
+    ## ⏱️ Polling Intervals
+
+    The API uses different update intervals for different types of data:
+
+    ### GPS coordinates of buses
+    - **Interval**: 60 seconds (obtained from `/Coordinates/GapTimeRefresh`)
+    - **Endpoints**: `/Coordinates/VehicleCoordinates/{id}`, `/Coordinates/VehiclesCoordinates/{id}`
+    - **Recommendation**: DO NOT request more frequently than 60 seconds
+
+    ### Arrival predictions
+    - **Dynamic interval** depending on time until arrival:
+      - Bus far away (>10 min): **60 seconds**
+      - Bus nearby (2-10 min): **30 seconds**
+      - Bus very close (<2 min): **15 seconds**
+    - **Endpoint**: `/StopsFis/{id}/{minutes}/arrivalEstimates`
+
+    ### Static data
+    - **Interval**: On screen load or on request
+    - **Endpoints**: `/StopsFis`, `/Itineraries`, `/Stops`
+    - **Recommendation**: Cache for 24 hours
+
+    ## 🚦 Rate Limiting
+
+    Recommended limits to prevent server overload:
+
+    - **GPS coordinates**: No more than once per 60 seconds per vehicleId
+    - **Arrival predictions**: No more than once per 15 seconds per stopId
+    - **Parallel requests**: No more than 5 simultaneously
+    - **Global limit**: 60 requests per minute per IP (recommended)
+
+    ## 💡 Best Practices
+
+    ### 1. Adaptive polling
+    ```typescript
+    function getUpdateInterval(minutesAway: number): number {
+      if (minutesAway < 2) return 15_000;   // 15 sec
+      if (minutesAway < 10) return 30_000;  // 30 sec
+      return 60_000;                         // 60 sec
+    }
+    ```
+
+    ### 2. Stop during inactivity
+    - Stop polling after 5 minutes of user inactivity
+    - Resume on activity (click, scroll)
+
+    ### 3. Exponential Backoff on errors
+    - On error, increase interval: 1s → 2s → 4s → 8s → max 60s
+    - Reset error counter on successful request
+
+    ### 4. Request deduplication
+    - Do not send repeat requests while previous one is not completed
+    - Use debounce for user actions
+
+    ## 📱 Operating Modes
+
+    **Active mode** (app open):
+    - GPS coordinates: every 60 seconds
+    - Arrival predictions: every 15-60 seconds (dynamic)
+
+    **Background mode** (app minimized):
+    - GPS coordinates: NOT updated
+    - Notifications: only after push from server
+
+    ## 🖥️ Server Infrastructure
+
+    **Domain**: `www.consorcioasturias.org`
+
+    **Direct IP**: `195.77.163.45`
+
+    **Web Server**: nginx/1.28.0
+
+    **SSL Certificate**:
+    - Issuer: Don Dominio / MrDomain RSA DV CA
+    - Valid until: February 28, 2026
+    - Common Name: www.consorcioasturias.com
+
+    **Direct IP Usage**:
+    ```bash
+    # When using direct IP, include Host header
+    curl -k "https://195.77.163.45/appcta/api/StopsFis/3614/60/arrivalEstimates" \
+      -H "Host: www.consorcioasturias.org"
+    ```
+
+    **CORS Headers**: Configured for cross-origin requests
+    - Methods: GET, POST, OPTIONS
+    - Headers: DNT, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Range
+
+    ## ⚠️ Important Notes
+
+    1. This is **unofficial API documentation**
+    2. API may change without warning
+    3. Some endpoints may require authentication
+    4. Respect rate limits - do not overload the server
+    5. VehicleId can only be obtained after calling `/StopsFis/{id}/{minutes}/arrivalEstimates`
+    6. **vehicleId range**: 60001-60838 (~672 total, ~406 with real GPS coordinates). IDs outside this range return `[]`.
+
+  version: 1.1.0
+  contact:
+    name: CTA API Support
+    url: https://www.consorcioasturias.org
+  license:
+    name: Unofficial Documentation
+    url: https://www.consorcioasturias.org
+  x-last-updated: "2024-12-16"
+  x-data-verified: true
+  x-verified-endpoints:
+    - /StopsFis/{id}/itineraries
+    - /StopsFis/{id}/{minutes}/arrivalEstimates
+    - /Coordinates/GapTimeRefresh
+
+servers:
+  - url: https://www.consorcioasturias.org/appcta/api
+    description: Production server - main API
+  - url: https://www.consorcioasturias.org/auth/api
+    description: Authentication server
+
+tags:
+  - name: Stops
+    description: Operations with stops
+  - name: Itineraries
+    description: Routes and directions
+  - name: Coordinates
+    description: GPS coordinates of buses
+  - name: Cards
+    description: Transport cards
+  - name: Recharge
+    description: Card recharging
+  - name: Rates
+    description: Rates and fares
+  - name: Auth
+    description: Authentication
+
+paths:
+  # ============ STOPS ============
+  /StopsFis/{longitude}/{latitude}/{radius}:
+    get:
+      tags: [Stops]
+      summary: Get stops within radius
+      description: Returns list of stops within specified radius from coordinates
+      operationId: getStopsInRadius
+      parameters:
+        - name: longitude
+          in: path
+          required: true
+          description: Longitude (WGS84)
+          schema:
+            type: number
+            format: double
+          examples:
+            default:
+              value: -5.8447876
+        - name: latitude
+          in: path
+          required: true
+          description: Latitude (WGS84)
+          schema:
+            type: number
+            format: double
+          examples:
+            default:
+              value: 43.3622222
+        - name: radius
+          in: path
+          required: true
+          description: Search radius in meters
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 10000
+          examples:
+            default:
+              value: 1000
+      responses:
+        '200':
+          description: List of stops
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Stop'
+
+  /StopsFis/{id}/itineraries:
+    get:
+      tags: [Stops]
+      summary: Get routes for stop
+      description: Returns list of all routes passing through this stop
+      operationId: getStopItineraries
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Stop ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3614
+      responses:
+        '200':
+          description: List of routes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StopItinerary'
+
+  /StopsFis/{id}/{minutes}/arrivalEstimates:
+    get:
+      tags: [Stops]
+      summary: Bus arrival predictions
+      description: |
+        Returns prediction of bus arrivals at stop within the next N minutes.
+
+        ## 📊 Data
+
+        For each bus returns:
+        - **vehicleId** - Bus ID for obtaining GPS coordinates
+        - **minutes** - Time until arrival in minutes (may be null)
+        - **lineDesc** - Route number (e.g., "H")
+        - **directionDesc** - Direction of travel
+        - **itineraryId** - Route ID for obtaining all buses on the line
+
+        ## ⏱️ Dynamic Polling
+
+        It's recommended to use adaptive interval depending on time until arrival:
+
+        - **Bus far away** (>10 min): update every **60 seconds**
+        - **Bus nearby** (2-10 min): update every **30 seconds**
+        - **Bus very close** (<2 min): update every **15 seconds**
+
+        ### Implementation example:
+
+        ```typescript
+        function getUpdateInterval(minutesAway: number): number {
+          if (minutesAway < 2) return 15_000;   // 15 sec
+          if (minutesAway < 10) return 30_000;  // 30 sec
+          return 60_000;                         // 60 sec
+        }
+        ```
+
+        ## 🔑 Obtaining VehicleId
+
+        This is the only endpoint that returns **vehicleId**.
+        Use the obtained vehicleId to request GPS coordinates:
+
+        ```
+        1. GET /StopsFis/{stopId}/30/arrivalEstimates
+           → Receive vehicleId: 12345
+
+        2. GET /Coordinates/VehicleCoordinates/12345
+           → Receive GPS coordinates of the bus
+        ```
+
+        **⚠️ Important**: If vehicleId = 0, then GPS data for this bus is unavailable.
+
+        ## 📱 App Usage
+
+        The official CTA CONECTA app uses this endpoint to:
+        - Display the list of arriving buses at the stop
+        - Obtain vehicleId for tracking on the map
+        - Dynamically update arrival times
+      operationId: getArrivalEstimates
+      x-dynamic-polling: true
+      x-polling-intervals:
+        far: 60
+        medium: 30
+        close: 15
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Stop ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3614
+        - name: minutes
+          in: path
+          required: true
+          description: Prediction time window in minutes (recommended 30-60)
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 120
+          examples:
+            default:
+              value: 30
+      responses:
+        '200':
+          description: List of arrival predictions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ArrivalEstimate'
+
+  /Stops/stops/{codName}:
+    get:
+      tags: [Stops]
+      summary: Get stop by code
+      description: Returns information about stop by its code/name
+      operationId: getStopByCode
+      parameters:
+        - name: codName
+          in: path
+          required: true
+          description: Stop code or name
+          schema:
+            type: string
+          examples:
+            default:
+              value: "CTA03614"
+      responses:
+        '200':
+          description: Stop information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stop'
+
+  # ============ ITINERARIES ============
+  /Itineraries/{id}/stopitineraries:
+    get:
+      tags: [Itineraries]
+      summary: Get route stops
+      description: Returns list of all stops on the route
+      operationId: getItineraryStops
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Route ID (itinerary)
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3581
+      responses:
+        '200':
+          description: List of route stops
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ItineraryStop'
+
+  /Itineraries/{id}/{vehicleId}/stopitineraries:
+    get:
+      tags: [Itineraries]
+      summary: Get stops for specific bus
+      description: Returns route stops for specific bus
+      operationId: getVehicleItineraryStops
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Route ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3581
+        - name: vehicleId
+          in: path
+          required: true
+          description: Bus ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 12345
+      responses:
+        '200':
+          description: List of stops for the bus
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ItineraryStop'
+
+  /StopsItinerary/{id}/{date}/timetables:
+    get:
+      tags: [Itineraries]
+      summary: Get timetable
+      description: Returns timetable for route on specified date
+      operationId: getItineraryTimetable
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Route ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3581
+        - name: date
+          in: path
+          required: true
+          description: Date in YYYY-MM-DD format
+          schema:
+            type: string
+            format: date
+          examples:
+            default:
+              value: "2024-12-16"
+      responses:
+        '200':
+          description: Timetable
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Timetable'
+
+  # ============ COORDINATES (GPS) ============
+  /Coordinates/GapTimeRefresh:
+    get:
+      tags: [Coordinates]
+      summary: Coordinates update interval
+      description: |
+        Returns recommended GPS coordinates update interval in seconds.
+
+        **Return value**: 60 (seconds)
+
+        Use this value as minimum interval between requests to endpoints:
+        - `/Coordinates/VehicleCoordinates/{id}`
+        - `/Coordinates/VehiclesCoordinates/{id}`
+
+        **⚠️ Important**: Do not request GPS coordinates more frequently than specified in this endpoint!
+      operationId: getRefreshInterval
+      responses:
+        '200':
+          description: Interval in seconds
+          content:
+            application/json:
+              schema:
+                type: integer
+                description: Minimum interval between GPS coordinate requests in seconds
+              examples:
+                default:
+                  value: 60
+
+  /Coordinates/coordinates/{id}:
+    get:
+      tags: [Coordinates]
+      summary: Get object coordinates
+      description: Returns GPS coordinates for specified ID
+      operationId: getCoordinates
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Object ID
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 12345
+      responses:
+        '200':
+          description: GPS coordinates
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VehicleCoordinates'
+
+  /Coordinates/VehicleCoordinates/{id}:
+    get:
+      tags: [Coordinates]
+      summary: Get bus coordinates
+      description: |
+        Returns current GPS coordinates of specific bus in real-time.
+
+        ## 📍 Data
+
+        Endpoint returns:
+        - GPS coordinates (latitude, longitude) in WGS84 format
+        - Speed of movement in m/s
+        - Direction of movement (bearing) and course (heading) in degrees
+        - Accuracy metrics for all parameters
+
+        ## ⏱️ Polling
+
+        - **Update interval**: 60 seconds (see `/Coordinates/GapTimeRefresh`)
+        - **Recommendation**: DO NOT request more frequently than 60 seconds
+        - **Rate limit**: No more than 1 request per minute per vehicleId
+
+        ## 🔍 How to get vehicleId?
+
+        VehicleId can be obtained from endpoint `/StopsFis/{id}/{minutes}/arrivalEstimates`
+        in the `vehicleId` field of arrival prediction object.
+
+        **⚠️ Important**: Not all buses transmit GPS coordinates. If vehicleId = 0
+        in arrival prediction, it means GPS data for this bus is unavailable.
+
+        ## 📱 App Usage
+
+        The official CTA CONECTA app uses this endpoint to:
+        - Display the bus on the map in real-time
+        - Animate marker movement with rotation (using bearing)
+        - Calculate arrival time based on speed
+      operationId: getVehicleCoordinates
+      x-polling-interval: 60
+      x-rate-limit: 1 per minute per vehicleId
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Bus ID (vehicleId from arrival estimates)
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 12345
+      responses:
+        '200':
+          description: Bus GPS coordinates
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VehicleCoordinates'
+              examples:
+                moving_bus:
+                  summary: Bus in motion
+                  value:
+                    vehicleId: 12345
+                    latitude: 43.3622222
+                    longitude: -5.8447876
+                    timestamp: "2024-12-16T15:30:00Z"
+                    speed: 8.33
+                    bearing: 180.0
+                    headingDegrees: 180.0
+                    speedAccuracyMetersPerSecond: 0.5
+                    bearingAccuracyDegrees: 15.0
+                    headingErrorDegrees: 10.0
+                stopped_bus:
+                  summary: Bus at stop
+                  value:
+                    vehicleId: 12346
+                    latitude: 43.3640000
+                    longitude: -5.8450000
+                    timestamp: "2024-12-16T15:31:00Z"
+                    speed: 0.0
+                    bearing: 90.0
+                    headingDegrees: 90.0
+                    speedAccuracyMetersPerSecond: 0.1
+                    bearingAccuracyDegrees: 30.0
+                    headingErrorDegrees: 5.0
+        '404':
+          description: Bus not found or not transmitting coordinates
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+              examples:
+                default:
+                  value:
+                    error: "Vehicle not found"
+
+  /Coordinates/VehiclesCoordinates/{id}:
+    get:
+      tags: [Coordinates]
+      summary: Get coordinates of all buses on route
+      description: |
+        Returns GPS coordinates of all active buses on specified route.
+
+        ## 📍 Data
+
+        Returns array of VehicleCoordinates objects for all buses
+        that are currently running on this route (itinerary).
+
+        ## 🗺️ Usage
+
+        This endpoint is convenient for displaying all buses of the route on the map.
+        For example, show all buses of line "H" simultaneously.
+
+        ## ⏱️ Polling
+
+        - **Update interval**: 60 seconds (see `/Coordinates/GapTimeRefresh`)
+        - **Recommendation**: DO NOT request more frequently than 60 seconds
+        - **Rate limit**: No more than 1 request per minute per itineraryId
+
+        ## 🔍 How to get itineraryId?
+
+        ItineraryId can be obtained from:
+        - `/StopsFis/{id}/{minutes}/arrivalEstimates` - `itineraryId` field
+        - `/StopsFis/{id}/itineraries` - list of all routes at the stop
+
+        ## 💡 Tip
+
+        If you need to track only one specific bus,
+        use `/Coordinates/VehicleCoordinates/{vehicleId}` -
+        it's more efficient and saves traffic.
+      operationId: getVehiclesCoordinates
+      x-polling-interval: 60
+      x-rate-limit: 1 per minute per itineraryId
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Route ID (itineraryId from arrival estimates)
+          schema:
+            type: integer
+          examples:
+            default:
+              value: 3581
+      responses:
+        '200':
+          description: List of GPS coordinates of all active buses on the route
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VehicleCoordinates'
+              examples:
+                default:
+                  value:
+                    - vehicleId: 12345
+                      latitude: 43.3622222
+                      longitude: -5.8447876
+                      speed: 8.33
+                      bearing: 180.0
+                      headingDegrees: 180.0
+                      timestamp: "2024-12-16T15:30:00Z"
+                    - vehicleId: 12346
+                      latitude: 43.3640000
+                      longitude: -5.8450000
+                      speed: 12.5
+                      bearing: 270.0
+                      headingDegrees: 270.0
+                      timestamp: "2024-12-16T15:30:05Z"
+
+  # ============ CARDS ============
+  /Card/{cardSerialNumber}:
+    get:
+      tags: [Cards]
+      summary: Get card information
+      description: Returns information about transport card
+      operationId: getCardInfo
+      parameters:
+        - name: cardSerialNumber
+          in: path
+          required: true
+          description: Card serial number
+          schema:
+            type: string
+          examples:
+            default:
+              value: "1234567890"
+      responses:
+        '200':
+          description: Card information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+
+  /CardToken/{idCardToken}:
+    get:
+      tags: [Cards]
+      summary: Get card token
+      description: Returns token for card
+      operationId: getCardToken
+      parameters:
+        - name: idCardToken
+          in: path
+          required: true
+          description: Card token ID
+          schema:
+            type: string
+          examples:
+            default:
+              value: "token123"
+      responses:
+        '200':
+          description: Card token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardToken'
+
+  /UserCard/canRecharge/{nif}:
+    get:
+      tags: [Cards]
+      summary: Check recharge possibility
+      description: Checks if user can recharge the card
+      operationId: canRecharge
+      parameters:
+        - name: nif
+          in: path
+          required: true
+          description: User NIF (tax identification number)
+          schema:
+            type: string
+          examples:
+            default:
+              value: "12345678A"
+      responses:
+        '200':
+          description: Check result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  canRecharge:
+                    type: boolean
+                  reason:
+                    type: string
+
+  # ============ RECHARGE ============
+  /OnlineRecharge/{cardNumber}:
+    get:
+      tags: [Recharge]
+      summary: Online card recharge
+      description: Get information for online recharge
+      operationId: getOnlineRecharge
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          description: Card number
+          schema:
+            type: string
+          examples:
+            default:
+              value: "1234567890"
+      responses:
+        '200':
+          description: Recharge information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RechargeInfo'
+
+  /CardTokenRecharge/{cardNumber}/{idCardToken}:
+    post:
+      tags: [Recharge]
+      summary: Recharge card by token
+      description: Execute card recharge using token
+      operationId: rechargeByToken
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: idCardToken
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RechargeRequest'
+      responses:
+        '200':
+          description: Recharge result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RechargeResponse'
+
+  /AutomaticRechargeConfig:
+    get:
+      tags: [Recharge]
+      summary: Get auto-recharge configuration
+      operationId: getAutoRechargeConfig
+      responses:
+        '200':
+          description: Configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoRechargeConfig'
+
+  /AutomaticRechargeConfig/global:
+    get:
+      tags: [Recharge]
+      summary: Global auto-recharge settings
+      operationId: getGlobalAutoRechargeConfig
+      responses:
+        '200':
+          description: Global settings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoRechargeConfig'
+
+  /AutomaticRechargeConfig/{cardNumber}:
+    get:
+      tags: [Recharge]
+      summary: Auto-recharge settings for card
+      operationId: getCardAutoRechargeConfig
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Card settings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoRechargeConfig'
+
+  /AutomaticRechargeConfig/changeStatus/{cardNumber}:
+    post:
+      tags: [Recharge]
+      summary: Change auto-recharge status
+      operationId: changeAutoRechargeStatus
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                enabled:
+                  type: boolean
+      responses:
+        '200':
+          description: Status changed
+
+  # ============ RATES ============
+  /Rates/ctaPassRates/{cardSerialNumber}:
+    get:
+      tags: [Rates]
+      summary: Pass rates
+      operationId: getPassRates
+      parameters:
+        - name: cardSerialNumber
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of rates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Rate'
+
+  /Rates/ctaTenPassTravels/{cardSerialNumber}:
+    get:
+      tags: [Rates]
+      summary: Ten-pass travels
+      operationId: getTenPassTravels
+      parameters:
+        - name: cardSerialNumber
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Travel history
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Travel'
+
+  # ============ AUTH ============
+  /Account/authenticate:
+    post:
+      tags: [Auth]
+      summary: Login and get JWT token
+      description: |
+        Authenticate user and receive JWT token for protected endpoints.
+
+        **Base URL**: `https://www.consorcioasturias.org/auth/api`
+
+        Token is valid for ~1 hour. Use refresh token to get new access token.
+      operationId: login
+      servers:
+        - url: https://www.consorcioasturias.org/auth/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            example:
+              username: "user@example.com"
+              password: "password123"
+      responses:
+        '200':
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+              example:
+                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                refreshToken: "JvqoliHbw/HHPMcNBLMhZxjKA3rqt0I439YJ0ymSIWA="
+        '401':
+          description: Invalid credentials
+
+  /Account/refreshToken:
+    post:
+      tags: [Auth]
+      summary: Refresh JWT token
+      description: Get new access token using refresh token
+      operationId: refreshToken
+      servers:
+        - url: https://www.consorcioasturias.org/auth/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenResponse'
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '401':
+          description: Invalid or expired refresh token
+
+  /DoB:
+    post:
+      tags: [Auth]
+      summary: Create user
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreate'
+      responses:
+        '200':
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /DoB/userData/{transactionId}:
+    get:
+      tags: [Auth]
+      summary: Get user data
+      operationId: getUserData
+      parameters:
+        - name: transactionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+# ============ COMPONENTS ============
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token obtained from `/auth/api/Account/authenticate`
+
+        Example: `Authorization: Bearer eyJhbGciOiJIUzI1NiIs...`
+
+  schemas:
+    Stop:
+      type: object
+      description: Public transport stop
+      properties:
+        id:
+          type: integer
+          description: Unique stop ID (used in other API calls)
+        idStop:
+          type: integer
+          description: Stop ID (same as id)
+        name:
+          type: string
+          description: Full stop name with location and CTA code
+        longitude:
+          type: number
+          format: double
+          description: Longitude (WGS84)
+        latitude:
+          type: number
+          format: double
+          description: Latitude (WGS84)
+      examples:
+        - id: 3614
+          idStop: 3614
+          name: "[OVIEDO/UVIÉU]  Adelantado de La Florida [CTA 03614]"
+          longitude: -5.83923508289355
+          latitude: 43.3643648798081
+
+    StopItinerary:
+      type: object
+      description: Route passing through stop (real data from API)
+      properties:
+        id:
+          type: integer
+          description: Unique record ID (e.g., 82491, 121303)
+        name:
+          type: string
+          description: Full stop name with location and CTA code
+        itineraryId:
+          type: integer
+          description: Route/itinerary ID (e.g., 3581, 4580, 4586). Used to get all stops on route.
+        itineraryDesc:
+          type: string
+          description: Route description (e.g., "H-SERRANO-PARQUE PRINCIPADO")
+        directionId:
+          type: integer
+          description: Direction ID (e.g., 5958, 7962, 7974)
+        directionDesc:
+          type: string
+          description: Direction description (e.g., "H2-PARQUE PRINCIPADO-SERRANO")
+        lineId:
+          type: integer
+          description: Line ID (e.g., 1970 for "H", 2552, 2553)
+        lineDesc:
+          type: string
+          description: Line name - can be short ("H") or full ("(Funcionarios) Piedras Blancas-Oviedo-Piedras Blancas")
+        companyName:
+          type: string
+          description: Transport company name (e.g., "Transportes Unidos de Asturias SL", "Automóviles Luarca SAU")
+        minutes:
+          type: [integer, "null"]
+          description: Time until arrival in minutes (null or 0 if no active bus)
+        vehicleId:
+          type: integer
+          description: |
+            Bus ID for GPS tracking.
+            - 0 = No active bus or GPS unavailable
+            - >0 = Active bus, use this ID for /Coordinates/VehicleCoordinates/{vehicleId}
+      examples:
+        - id: 82491
+          name: "[OVIEDO/UVIÉU]  Adelantado de La Florida [CTA 03614]"
+          itineraryId: 3581
+          itineraryDesc: "H-SERRANO-PARQUE PRINCIPADO"
+          directionId: 5958
+          directionDesc: "H2-PARQUE PRINCIPADO-SERRANO"
+          lineId: 1970
+          lineDesc: "H"
+          companyName: "Transportes Unidos de Asturias SL "
+          minutes: 0
+          vehicleId: 0
+        - id: 121303
+          name: "[OVIEDO/UVIÉU]  Adelantado de La Florida [CTA 03614]"
+          itineraryId: 4580
+          itineraryDesc: "Piedras Blancas-Oviedo [AO2] [Campus del Cristo] [Consejerías]"
+          directionId: 7962
+          directionDesc: "Oviedo/Uviéu-Piedrasblancas/Piedras Blancas [OA2] [Campus del Cristo] [Consejerías]"
+          lineId: 2552
+          lineDesc: "(Funcionarios) Piedras Blancas-Oviedo-Piedras Blancas"
+          companyName: "Automóviles Luarca SAU "
+          minutes: 0
+          vehicleId: 0
+        - id: 121394
+          name: "[OVIEDO/UVIÉU]  Adelantado de La Florida [CTA 03614]"
+          itineraryId: 4586
+          itineraryDesc: "Gijón-Oviedo [OG2] [Campus del Cristo] [Consejerías] [Somió]"
+          directionId: 7974
+          directionDesc: "Oviedo/Uviéu-Gijón/Xixón [OG2] [Campus del Cristo] [Consejerías] [Somió]"
+          lineId: 2553
+          lineDesc: "(Funcionarios)  Gijón-Oviedo-Gijón"
+          companyName: "Automóviles Luarca SAU "
+          minutes: 0
+          vehicleId: 0
+
+    ArrivalEstimate:
+      type: object
+      description: |
+        Bus arrival prediction at stop.
+
+        Same structure as StopItinerary. When no buses are running,
+        API returns a single object with directionDesc = "Próximamente en servicio"
+        and all IDs = 0.
+      required:
+        - id
+        - lineDesc
+        - vehicleId
+      properties:
+        id:
+          type: integer
+          description: Record ID (0 if no service)
+        name:
+          type: string
+          description: Stop name (empty if no service)
+        itineraryId:
+          type: integer
+          description: Route ID (0 if no service)
+        itineraryDesc:
+          type: string
+          description: Route description (empty if no service)
+        directionId:
+          type: integer
+          description: Direction ID (0 if no service)
+        directionDesc:
+          type: string
+          description: Direction or status message ("Próximamente en servicio" = Coming soon)
+        lineId:
+          type: integer
+          description: Line ID (0 if no service)
+        lineDesc:
+          type: string
+          description: Line name (empty if no service)
+        companyName:
+          type: string
+          description: Company name (empty if no service)
+        minutes:
+          type: [integer, "null"]
+          description: Minutes until arrival (null if no prediction, 0 if no service)
+        vehicleId:
+          type: integer
+          description: |
+            Bus ID for GPS tracking.
+            - 0 = No active bus or GPS unavailable
+            - >0 = Active bus, use for /Coordinates/VehicleCoordinates/{vehicleId}
+      examples:
+        - id: 82491
+          name: "[OVIEDO/UVIÉU]  Adelantado de La Florida [CTA 03614]"
+          itineraryId: 3581
+          itineraryDesc: "H-SERRANO-PARQUE PRINCIPADO"
+          directionId: 5958
+          directionDesc: "H2-PARQUE PRINCIPADO-SERRANO"
+          lineId: 1970
+          lineDesc: "H"
+          companyName: "Transportes Unidos de Asturias SL "
+          minutes: 5
+          vehicleId: 0
+        - id: 0
+          name: ""
+          itineraryId: 0
+          itineraryDesc: ""
+          directionId: 0
+          directionDesc: "Próximamente en servicio"
+          lineId: 0
+          lineDesc: ""
+          companyName: ""
+          minutes: null
+          vehicleId: 0
+
+    VehicleCoordinates:
+      type: object
+      description: |
+        Bus GPS coordinates in real-time.
+
+        Updated every 60 seconds (see /Coordinates/GapTimeRefresh).
+
+        **Verified with real data** on 2024-12-16.
+      required:
+        - id
+        - latitude
+        - longitude
+      properties:
+        id:
+          type: integer
+          description: Vehicle ID (same as request parameter)
+          example: 60723
+        latitude:
+          type: number
+          format: double
+          description: Latitude in WGS84 format
+          example: 43.3671264648438
+        longitude:
+          type: number
+          format: double
+          description: Longitude in WGS84 format
+          example: -5.85043334960938
+        locDate:
+          type: string
+          format: date-time
+          description: GPS location timestamp (local time, no timezone)
+          example: "2025-12-16T19:36:56"
+        lastActDate:
+          type: string
+          format: date-time
+          description: Last activity timestamp (local time, no timezone)
+          example: "2025-12-16T19:36:55"
+      examples:
+        - id: 60723
+          longitude: -5.85043334960938
+          latitude: 43.3671264648438
+          locDate: "2025-12-16T19:36:56"
+          lastActDate: "2025-12-16T19:36:55"
+
+    ItineraryStop:
+      type: object
+      description: Stop on route
+      properties:
+        stopId:
+          type: integer
+        stopName:
+          type: string
+        order:
+          type: integer
+          description: Sequential number of stop on route
+        distanceFromStart:
+          type: number
+          description: Distance from start of route in meters
+
+    Timetable:
+      type: object
+      description: Timetable
+      properties:
+        time:
+          type: string
+          format: time
+        stopId:
+          type: integer
+        stopName:
+          type: string
+      examples:
+        - time: "08:30"
+          stopId: 3614
+          stopName: "Adelantado de La Florida"
+
+    Card:
+      type: object
+      description: Transport card
+      properties:
+        cardSerialNumber:
+          type: string
+        cardType:
+          type: string
+        balance:
+          type: number
+          format: float
+        expiryDate:
+          type: string
+          format: date
+
+    CardToken:
+      type: object
+      properties:
+        idCardToken:
+          type: string
+        token:
+          type: string
+        expiresAt:
+          type: string
+          format: date-time
+
+    RechargeInfo:
+      type: object
+      properties:
+        cardNumber:
+          type: string
+        availableAmounts:
+          type: array
+          items:
+            type: number
+        paymentMethods:
+          type: array
+          items:
+            type: string
+
+    RechargeRequest:
+      type: object
+      required:
+        - amount
+      properties:
+        amount:
+          type: number
+          format: float
+        paymentMethod:
+          type: string
+      examples:
+        - amount: 10.00
+          paymentMethod: "credit_card"
+
+    RechargeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        transactionId:
+          type: string
+        newBalance:
+          type: number
+          format: float
+
+    AutoRechargeConfig:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        threshold:
+          type: number
+          description: Balance threshold for auto-recharge
+        amount:
+          type: number
+          description: Auto-recharge amount
+
+    Rate:
+      type: object
+      properties:
+        rateId:
+          type: integer
+        name:
+          type: string
+        price:
+          type: number
+          format: float
+        validityDays:
+          type: integer
+
+    Travel:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        line:
+          type: string
+        stopFrom:
+          type: string
+        stopTo:
+          type: string
+        fare:
+          type: number
+          format: float
+
+    User:
+      type: object
+      properties:
+        userId:
+          type: string
+        email:
+          type: string
+        name:
+          type: string
+        nif:
+          type: string
+
+    UserCreate:
+      type: object
+      required:
+        - email
+        - name
+        - nif
+      properties:
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        nif:
+          type: string
+        dateOfBirth:
+          type: string
+          format: date
+
+    LoginRequest:
+      type: object
+      description: Login credentials
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: Username or email
+        password:
+          type: string
+          format: password
+          description: User password
+
+    TokenResponse:
+      type: object
+      description: |
+        JWT authentication tokens.
+
+        The `token` is a JWT with the following claims:
+        - `jti` - Token ID
+        - `email` - User email
+        - `CompanyId` - Company ID (empty for regular users)
+        - `IdentityId` - User identity ID
+        - `role` - User roles array (e.g., ["ViajeroUser", "Viajero"])
+        - `exp` - Expiration timestamp (~1 hour)
+        - `iss` / `aud` - Issuer/Audience (consorcioasturias.com)
+      required:
+        - token
+        - refreshToken
+      properties:
+        token:
+          type: string
+          description: JWT access token (valid ~1 hour)
+        refreshToken:
+          type: string
+          description: Refresh token for obtaining new access token
+
+    JwtPayload:
+      type: object
+      description: Decoded JWT token payload
+      properties:
+        jti:
+          type: string
+          description: JWT ID (unique token identifier)
+        email:
+          type: string
+          description: User email
+        CompanyId:
+          type: string
+          description: Company ID (empty for regular users)
+        FirstLogin:
+          type: string
+          description: "Is first login (\"true\"/\"false\")"
+        accountExpirationDate:
+          type: integer
+          description: Account expiration (Unix timestamp)
+        accountLastAccess:
+          type: integer
+          description: Last access time (Unix timestamp)
+        IdentityId:
+          type: string
+          format: uuid
+          description: User identity ID
+        role:
+          type: array
+          items:
+            type: string
+          description: User roles (e.g., ["ViajeroUser", "Viajero"])
+          example: ["ViajeroUser", "Viajero"]
+        nbf:
+          type: integer
+          description: Not before (Unix timestamp)
+        exp:
+          type: integer
+          description: Expiration (Unix timestamp, ~1 hour from issue)
+        iss:
+          type: string
+          description: Issuer
+          example: "http://www.consorcioasturias.com"
+        aud:
+          type: string
+          description: Audience
+          example: "http://www.consorcioasturias.com"
+
+# ============ EXTERNAL DOCUMENTATION ============
+externalDocs:
+  description: |
+    📚 CTA API - Unofficial Documentation
+
+    Related files:
+    - **cta-lines-catalog.json** - Complete catalog of 60+ bus lines grouped by company
+    - **all-lines.json** - Raw lines data from API
+  url: https://www.consorcioasturias.org
+
+# ============ METADATA ============
+x-api-metadata:
+  source: Unofficial documentation
+  data-verified-date: 2024-12-16
+  server:
+    domain: www.consorcioasturias.org
+    web-server: nginx/1.28.0
+    cors-enabled: true
+  polling-intervals:
+    gps-coordinates: 60s
+    arrival-estimates-far: 60s
+    arrival-estimates-medium: 30s
+    arrival-estimates-close: 15s
+    static-data: on-demand
+  rate-limits:
+    gps-per-vehicle: 1 req/min
+    arrival-per-stop: 4 req/min (dynamic)
+    parallel-requests: 5 max
+    global: 60 req/min (recommended)
+  real-id-ranges:
+    stopId: "e.g., 3614"
+    lineId: "1970-2555+ (e.g., 1970 for line H)"
+    itineraryId: "3581-4599+"
+    directionId: "5958-8000+"
+    vehicleId: "60001-60838 (~672 total, ~406 with GPS). Others return []"
+  companies:
+    - "Transportes Unidos de Asturias SL"
+    - "Automóviles Luarca SAU"
+  lines-examples:
+    - lineId: 1970
+      lineDesc: "H"
+      company: "Transportes Unidos de Asturias SL"
+    - lineId: 2552
+      lineDesc: "(Funcionarios) Piedras Blancas-Oviedo-Piedras Blancas"
+      company: "Automóviles Luarca SAU"
+    - lineId: 2553
+      lineDesc: "(Funcionarios)  Gijón-Oviedo-Gijón"
+      company: "Automóviles Luarca SAU"
+    - lineId: 2555
+      lineDesc: "(Centro Bus-Universidad) Gijón-Campus de Oviedo"
+      company: "Automóviles Luarca SAU"

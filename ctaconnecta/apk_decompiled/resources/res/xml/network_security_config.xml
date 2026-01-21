@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.228.161.210
+        </domain>
+        <domain includeSubdomains="true">192.168.200.116
+        </domain>
+        <domain includeSubdomains="true">63.33.235.31
+        </domain>
+        <domain includeSubdomains="true">87.253.231.46
+        </domain>
+        <domain includeSubdomains="true">195.77.163.45
+        </domain>
+        <trust-anchors>
+            <certificates src="@raw/keycta"/>
+            <certificates src="@raw/root"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

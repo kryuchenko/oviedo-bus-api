@@ -1,0 +1,302 @@
+[
+  {
+    "company": "Asturiana de Turismo SA",
+    "lines": [
+      {
+        "lineId": 82,
+        "lineDesc": "Carbayín Alto-Pola de Siero"
+      }
+    ]
+  },
+  {
+    "company": "Autocares Mariano SL",
+    "lines": [
+      {
+        "lineId": 1210,
+        "lineDesc": "C-Pola de Laviana-Gijón (por A-66, San Miguel de la Barreda)"
+      },
+      {
+        "lineId": 1212,
+        "lineDesc": "C-Sama de Langreo-Gijón (por AS-246, Alto de la Madera)"
+      },
+      {
+        "lineId": 2074,
+        "lineDesc": "Vega-Lavandera-Vega"
+      }
+    ]
+  },
+  {
+    "company": "Autocares Medina SL",
+    "lines": [
+      {
+        "lineId": 79,
+        "lineDesc": "Gijón-Caldones-Valdornón"
+      },
+      {
+        "lineId": 1140,
+        "lineDesc": "Gijón-Deva por Castiello"
+      }
+    ]
+  },
+  {
+    "company": "Automóviles Luarca SAU",
+    "lines": [
+      {
+        "lineId": 172,
+        "lineDesc": "Oviedo-Aeropuerto"
+      },
+      {
+        "lineId": 195,
+        "lineDesc": "Oviedo-Villaviciosa"
+      },
+      {
+        "lineId": 196,
+        "lineDesc": "Oviedo (Consejerías)-Villaviciosa"
+      },
+      {
+        "lineId": 213,
+        "lineDesc": "Soto de Llanera-Arlós"
+      },
+      {
+        "lineId": 225,
+        "lineDesc": "Oviedo-Barredo, por Lugo"
+      },
+      {
+        "lineId": 365,
+        "lineDesc": "Gijón-Avilés-Pravia, por San Juán de la Arena"
+      },
+      {
+        "lineId": 764,
+        "lineDesc": "Soto de Llanera-Las Vegas"
+      },
+      {
+        "lineId": 1525,
+        "lineDesc": "Gijón-Avilés-Aeropuerto"
+      },
+      {
+        "lineId": 2018,
+        "lineDesc": "(Búho) Oviedo-Posada de Llanera [Los Exconxuraos]"
+      },
+      {
+        "lineId": 2440,
+        "lineDesc": "(Búho) Oviedo-Lugones-Llanera"
+      },
+      {
+        "lineId": 2544,
+        "lineDesc": "Oviedo-Gijón por Carretera AS-18"
+      },
+      {
+        "lineId": 2552,
+        "lineDesc": "(Funcionarios) Piedras Blancas-Oviedo-Piedras Blancas"
+      },
+      {
+        "lineId": 2553,
+        "lineDesc": "(Funcionarios)  Gijón-Oviedo-Gijón"
+      },
+      {
+        "lineId": 2555,
+        "lineDesc": "(Centro Bus-Universidad) Gijón-Campus de Oviedo"
+      },
+      {
+        "lineId": 2557,
+        "lineDesc": "Oviedo-Avilés por AS-17"
+      },
+      {
+        "lineId": 2574,
+        "lineDesc": "Sotiello-Gijón por Porceyo"
+      }
+    ]
+  },
+  {
+    "company": "Autos Sama SA",
+    "lines": [
+      {
+        "lineId": 285,
+        "lineDesc": "Pola de Siero-Sama de Langreo"
+      },
+      {
+        "lineId": 286,
+        "lineDesc": "Pola de Siero-Rozadas"
+      },
+      {
+        "lineId": 287,
+        "lineDesc": "Pola de Siero-Lieres-Carbayín-Sama de Langreo"
+      },
+      {
+        "lineId": 288,
+        "lineDesc": "Pola de Siero-Carbayín-Lieres-Pola de Siero"
+      },
+      {
+        "lineId": 289,
+        "lineDesc": "Traspando-Pola de Siero"
+      },
+      {
+        "lineId": 290,
+        "lineDesc": "La Charca-Pola de Siero"
+      },
+      {
+        "lineId": 438,
+        "lineDesc": "C-Pola de Laviana-Gijón (por A-66, San Miguel de la Barreda)"
+      },
+      {
+        "lineId": 440,
+        "lineDesc": "C-Sama de Langreo-Gijón (por AS-246, Alto de la Madera)"
+      }
+    ]
+  },
+  {
+    "company": "Casablanca Bus SL",
+    "lines": [
+      {
+        "lineId": 1997,
+        "lineDesc": "L30 - Avilés-Grado"
+      },
+      {
+        "lineId": 1998,
+        "lineDesc": "L37 - Avilés- El Caliero"
+      },
+      {
+        "lineId": 1999,
+        "lineDesc": "L36 - Avilés-La Peral-Grullos"
+      },
+      {
+        "lineId": 2001,
+        "lineDesc": "L34 - Avilés-Callezuela-Llanavao"
+      },
+      {
+        "lineId": 2003,
+        "lineDesc": "L32 - Avilés-Illas-Callezuela-Grado"
+      },
+      {
+        "lineId": 2004,
+        "lineDesc": "L35 - Avilés-Callezuela-Llanavao, por Hospital San Agustín"
+      },
+      {
+        "lineId": 2005,
+        "lineDesc": "L31 - Avilés-Llagarón-Grado, por Hospital San Agustín"
+      },
+      {
+        "lineId": 2006,
+        "lineDesc": "L38 - Avilés-Miranda"
+      },
+      {
+        "lineId": 2007,
+        "lineDesc": "L33 - Avilés-Illas-Callezuela-Grado, por Hospital de San Agustín"
+      }
+    ]
+  },
+  {
+    "company": "Coalla Rodríguez Dimas",
+    "lines": [
+      {
+        "lineId": 1173,
+        "lineDesc": "Tuilla - La Nueva"
+      }
+    ]
+  },
+  {
+    "company": "Compañía del Tranvía Eléctrico de Avilés SA",
+    "lines": [
+      {
+        "lineId": 272,
+        "lineDesc": "L1 - La Luz-Piedras Blancas"
+      },
+      {
+        "lineId": 279,
+        "lineDesc": "L11 - Piedras Blancas-Hospital San Agustín"
+      }
+    ]
+  },
+  {
+    "company": "EMTUSA",
+    "lines": [
+      {
+        "lineId": 390,
+        "lineDesc": "L14 - Sotiello-Tremañes-Infanzón"
+      },
+      {
+        "lineId": 392,
+        "lineDesc": "L16 - Estación Ferrocarril-Vega"
+      }
+    ]
+  },
+  {
+    "company": "La Fresneda 2025 UTE",
+    "lines": [
+      {
+        "lineId": 2504,
+        "lineDesc": "(Búho) Lugones-Fresneda-Pola de Siero"
+      },
+      {
+        "lineId": 2513,
+        "lineDesc": "Oviedo-Noreña-Pola de Siero"
+      },
+      {
+        "lineId": 2516,
+        "lineDesc": "Pola de Siero-San Román de Sariego (Directo)"
+      },
+      {
+        "lineId": 2517,
+        "lineDesc": "Pola de Siero-Villaviciosa"
+      },
+      {
+        "lineId": 2526,
+        "lineDesc": "Pola de Siero-San Román de Sariego"
+      }
+    ]
+  },
+  {
+    "company": "Transportes Unidos de Asturias SL",
+    "lines": [
+      {
+        "lineId": 1964,
+        "lineDesc": "A"
+      },
+      {
+        "lineId": 1970,
+        "lineDesc": "H"
+      },
+      {
+        "lineId": 1971,
+        "lineDesc": "J"
+      },
+      {
+        "lineId": 1973,
+        "lineDesc": "L"
+      },
+      {
+        "lineId": 1974,
+        "lineDesc": "M"
+      },
+      {
+        "lineId": 1975,
+        "lineDesc": "O"
+      },
+      {
+        "lineId": 1976,
+        "lineDesc": "G"
+      },
+      {
+        "lineId": 1977,
+        "lineDesc": "BUHO"
+      },
+      {
+        "lineId": 2284,
+        "lineDesc": "U"
+      }
+    ]
+  },
+  {
+    "company": "Villa Excursiones SA",
+    "lines": [
+      {
+        "lineId": 50,
+        "lineDesc": "L22 - Avilés-Pillarno"
+      },
+      {
+        "lineId": 1981,
+        "lineDesc": "L14 - Avilés-Villanueva"
+      }
+    ]
+  }
+]

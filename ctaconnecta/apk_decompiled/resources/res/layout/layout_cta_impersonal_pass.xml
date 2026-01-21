@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tvBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/label_money_on_card"
+        app:layout_constraintStart_toStartOf="@+id/mbBalance"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextViewLightDetail"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbBalance"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBalance"
+        style="@style/ButtonDetailCard.Green"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbRechargeCtaImpersonalPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_recharge"
+        android:layout_marginStart="@dimen/spacing_small"
+        app:layout_constraintBottom_toBottomOf="@+id/mbBalance"
+        app:layout_constraintCircleRadius="@dimen/spacing_normal"
+        app:layout_constraintStart_toEndOf="@+id/mbBalance"
+        style="@style/ButtonDetailCard.Yellow"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

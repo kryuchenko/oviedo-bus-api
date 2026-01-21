@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navMyAccount"
+        android:title="@string/label_my_account"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navAccessSettings"
+        android:title="@string/label_access_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navMyCreditCard"
+        android:title="@string/label_my_credit_cards"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navLegalRepresentative"
+        android:title="@string/label_legal_representative"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navCloseSession"
+        android:title="@string/closeSession"
+        app:showAsAction="never"/>
+</menu>

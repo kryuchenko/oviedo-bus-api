@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navAutoRecharge"
+        android:title="@string/label_automatic_recharge"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navSendIncident"
+        android:title="@string/label_send_incident"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navCertificate"
+        android:title="@string/label_certificate_recharge"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/navLargeFamilyDiscount"
+        android:title="@string/label_large_family_discount"
+        app:showAsAction="never"/>
+</menu>
